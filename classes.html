@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes — IronJaw Boxing Gym & Training Center</title>
+    <meta name="description" content="Explore boxing classes by level at IronJaw. Beginner fundamentals, cardio boxing, advanced sparring, youth programs, and personal training sessions.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>(function(){try{if(localStorage.getItem('ij-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('ij-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();</script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<!-- ============ SECTION 1: PAGE HERO ============ -->
+<section style="background:var(--secondary);padding:100px 0 60px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;z-index:0;"><img src="assets/images/group-boxing-class.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.2);"></div>
+    <div class="container" style="position:relative;z-index:2;">
+        <span class="section-badge" style="background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.3);backdrop-filter:blur(8px);"><i class="fas fa-calendar-days"></i> Class Schedule</span>
+        <h1 class="section-title fade-up" style="color:#fff;font-size:3rem;">Our <span style="color:var(--primary-light);">Classes</span></h1>
+        <p class="section-subtitle fade-up" style="color:rgba(255,255,255,0.6);">From fundamentals to fight-ready — find the perfect class for your level and goals.</p>
+    </div>
+</section>
+
+<!-- ============ SECTION 2: FILTER + CLASS CARDS ============ -->
+<section class="section">
+    <div class="container text-center">
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Classes</button>
+            <button class="filter-tab" data-filter="beginner">Beginner</button>
+            <button class="filter-tab" data-filter="intermediate">Intermediate</button>
+            <button class="filter-tab" data-filter="advanced">Advanced</button>
+            <button class="filter-tab" data-filter="youth">Youth</button>
+        </div>
+
+        <div class="schedule-grid">
+            <div class="schedule-card filter-card fade-up" data-category="beginner">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Boxing Fundamentals</h3>
+                    <span class="schedule-card-level beginner">Beginner</span>
+                </div>
+                <p class="schedule-card-desc">Master the basics — proper stance, footwork, jab-cross, and basic defense. Perfect for your first day in the gym.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 60 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Mon, Wed, Fri — 6:00 AM & 6:00 PM</span>
+                    <span><i class="fas fa-user"></i> Coach: Marcus Johnson</span>
+                    <span><i class="fas fa-users"></i> Max 15 per class</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up delay-1" data-category="beginner">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Boxing Cardio Blast</h3>
+                    <span class="schedule-card-level beginner">Beginner</span>
+                </div>
+                <p class="schedule-card-desc">High-energy, non-contact boxing workout. Burn up to 800 calories while learning combos on heavy bags and pads.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 45 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Tue, Thu — 7:00 AM & 5:30 PM</span>
+                    <span><i class="fas fa-user"></i> Coach: Sofia Reyes</span>
+                    <span><i class="fas fa-users"></i> Max 20 per class</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up delay-2" data-category="intermediate">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Mitt Work & Combos</h3>
+                    <span class="schedule-card-level intermediate">Intermediate</span>
+                </div>
+                <p class="schedule-card-desc">Advanced combination work with focus mitts. Sharpen accuracy, timing, and punch selection with trainer guidance.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 60 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Mon, Wed, Fri — 12:00 PM</span>
+                    <span><i class="fas fa-user"></i> Coach: Diego Castillo</span>
+                    <span><i class="fas fa-users"></i> Max 12 per class</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up" data-category="intermediate">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Strength & Conditioning</h3>
+                    <span class="schedule-card-level intermediate">Intermediate</span>
+                </div>
+                <p class="schedule-card-desc">Fighter-specific strength training. Battle ropes, plyometrics, and functional movements to build explosive power.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 50 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Tue, Thu, Sat — 8:00 AM</span>
+                    <span><i class="fas fa-user"></i> Coach: Diego Castillo</span>
+                    <span><i class="fas fa-users"></i> Max 16 per class</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up delay-1" data-category="advanced">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Sparring Sessions</h3>
+                    <span class="schedule-card-level advanced">Advanced</span>
+                </div>
+                <p class="schedule-card-desc">Controlled sparring with full protective gear. Focus on ring strategy, defensive skills, and fight IQ development.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 90 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Fri — 5:00 PM, Sat — 10:00 AM</span>
+                    <span><i class="fas fa-user"></i> Coach: Marcus Johnson</span>
+                    <span><i class="fas fa-users"></i> Max 8 per session</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up delay-2" data-category="advanced">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Competition Prep</h3>
+                    <span class="schedule-card-level advanced">Advanced</span>
+                </div>
+                <p class="schedule-card-desc">Intensive fight preparation for competitive boxers. Includes sparring, video analysis, weight management, and mental conditioning.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 120 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Mon–Sat — 4:00 PM</span>
+                    <span><i class="fas fa-user"></i> Coach: Marcus Johnson</span>
+                    <span><i class="fas fa-users"></i> Max 6 per session</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up" data-category="youth">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Youth Boxing (Ages 8–12)</h3>
+                    <span class="schedule-card-level alllevels">Youth</span>
+                </div>
+                <p class="schedule-card-desc">Fun, safe introduction to boxing for young athletes. Builds coordination, discipline, and confidence through age-appropriate drills.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 45 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Tue, Thu — 4:00 PM</span>
+                    <span><i class="fas fa-user"></i> Coach: Tommy O'Brien</span>
+                    <span><i class="fas fa-users"></i> Max 12 per class</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up delay-1" data-category="youth">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Teen Boxing (Ages 13–17)</h3>
+                    <span class="schedule-card-level alllevels">Youth</span>
+                </div>
+                <p class="schedule-card-desc">Structured boxing training for teenagers. Combines fitness, technique development, and optional light sparring in a supervised environment.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 60 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Mon, Wed, Fri — 4:30 PM</span>
+                    <span><i class="fas fa-user"></i> Coach: Tommy O'Brien</span>
+                    <span><i class="fas fa-users"></i> Max 14 per class</span>
+                </div>
+            </div>
+            <div class="schedule-card filter-card fade-up delay-2" data-category="beginner">
+                <div class="schedule-card-header">
+                    <h3 class="schedule-card-title">Women's Boxing</h3>
+                    <span class="schedule-card-level beginner">Beginner</span>
+                </div>
+                <p class="schedule-card-desc">Women-only boxing class combining technique and fitness. Empowering, supportive, and intense — all in one session.</p>
+                <div class="schedule-card-meta">
+                    <span><i class="fas fa-clock"></i> 50 minutes</span>
+                    <span><i class="fas fa-calendar"></i> Mon, Wed — 10:00 AM</span>
+                    <span><i class="fas fa-user"></i> Coach: Sofia Reyes</span>
+                    <span><i class="fas fa-users"></i> Max 18 per class</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 3: SPLIT — WHAT TO EXPECT ============ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="split-row">
+            <div class="split-img slide-left">
+                <img src="assets/images/boxing-cardio.jpg" alt="Boxing mitt work training">
+                <div class="split-accent"></div>
+            </div>
+            <div class="split-content slide-right">
+                <span class="section-badge"><i class="fas fa-clipboard-check"></i> What to Expect</span>
+                <h2>Your First <span style="color:var(--primary);">Class</span></h2>
+                <p>Walking into a boxing gym for the first time can be intimidating — but at IronJaw, we make sure every newcomer feels welcome and prepared.</p>
+                <div class="split-list">
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Arrive 15 minutes early for orientation</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Wear comfortable athletic clothing</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> We provide gloves and wraps for beginners</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Bring water and a towel</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> No experience required — coaches guide you</div>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Your First Class</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 4: WEEKLY SCHEDULE TABLE ============ -->
+<section class="section">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-table"></i> Weekly Schedule</span>
+        <h2 class="section-title fade-up">Class <span style="color:var(--primary);">Timetable</span></h2>
+        <p class="section-subtitle fade-up">Plan your week with our structured class schedule.</p>
+
+        <div class="comparison-table-wrap overflow-x-auto fade-up">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>6:00 AM</strong></td>
+                        <td>Fundamentals</td>
+                        <td>—</td>
+                        <td>Fundamentals</td>
+                        <td>—</td>
+                        <td>Fundamentals</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7:00 AM</strong></td>
+                        <td>—</td>
+                        <td>Cardio Blast</td>
+                        <td>—</td>
+                        <td>Cardio Blast</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8:00 AM</strong></td>
+                        <td>—</td>
+                        <td>S&C</td>
+                        <td>—</td>
+                        <td>S&C</td>
+                        <td>—</td>
+                        <td>S&C</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:00 AM</strong></td>
+                        <td>Women's Boxing</td>
+                        <td>—</td>
+                        <td>Women's Boxing</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Sparring</td>
+                    </tr>
+                    <tr>
+                        <td><strong>12:00 PM</strong></td>
+                        <td>Mitt Work</td>
+                        <td>—</td>
+                        <td>Mitt Work</td>
+                        <td>—</td>
+                        <td>Mitt Work</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4:00 PM</strong></td>
+                        <td>Comp Prep</td>
+                        <td>Youth (8-12)</td>
+                        <td>Comp Prep</td>
+                        <td>Youth (8-12)</td>
+                        <td>Comp Prep</td>
+                        <td>Comp Prep</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4:30 PM</strong></td>
+                        <td>Teen Boxing</td>
+                        <td>—</td>
+                        <td>Teen Boxing</td>
+                        <td>—</td>
+                        <td>Teen Boxing</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5:30 PM</strong></td>
+                        <td>—</td>
+                        <td>Cardio Blast</td>
+                        <td>—</td>
+                        <td>Cardio Blast</td>
+                        <td>Sparring</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6:00 PM</strong></td>
+                        <td>Fundamentals</td>
+                        <td>—</td>
+                        <td>Fundamentals</td>
+                        <td>—</td>
+                        <td>Fundamentals</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 5: EQUIPMENT SPLIT ============ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="split-row" style="direction:ltr;">
+            <div class="split-content slide-left" style="direction:inherit;">
+                <span class="section-badge"><i class="fas fa-shield-halved"></i> Equipment & Safety</span>
+                <h2>Train <span style="color:var(--primary);">Safe</span>, Train Smart</h2>
+                <p>Safety is never an afterthought at IronJaw. We provide top-tier equipment and enforce strict safety protocols so you can focus on getting better without worry.</p>
+                <div class="split-list">
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Everlast & Winning brand gloves available</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Full protective gear for sparring (headgear, mouthguard, cup)</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Equipment sanitized after every session</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> First-aid trained staff on premises</div>
+                </div>
+            </div>
+            <div class="split-img slide-right">
+                <img src="assets/images/boxing-equipment.jpg" alt="Boxing equipment">
+                <div class="split-accent"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 6: PERSONAL TRAINING ============ -->
+<section class="section">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-bullseye"></i> 1-on-1 Training</span>
+        <h2 class="section-title fade-up">Personal <span style="color:var(--primary);">Training</span></h2>
+        <p class="section-subtitle fade-up">Customized programs with undivided attention from elite coaches.</p>
+
+        <div class="programs-grid" style="grid-template-columns:repeat(2,1fr);max-width:800px;margin:0 auto;">
+            <div class="program-card fade-up">
+                <div class="program-card-img">
+                    <img src="assets/images/coach-training.jpg" alt="Personal boxing training">
+                    <span class="program-card-level">1-on-1</span>
+                </div>
+                <div class="program-card-body">
+                    <h3 class="program-card-title">Single Session</h3>
+                    <p class="program-card-desc">60-minute private session tailored to your goals. Perfect for technique correction, fight prep, or fitness assessments.</p>
+                    <div class="program-card-meta">
+                        <span><i class="fas fa-clock"></i> 60 min</span>
+                        <span><strong>$75/session</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card fade-up delay-1">
+                <div class="program-card-img">
+                    <img src="assets/images/boxer-training-bag.jpg" alt="Boxing training package">
+                    <span class="program-card-level">Package</span>
+                </div>
+                <div class="program-card-body">
+                    <h3 class="program-card-title">4-Session Package</h3>
+                    <p class="program-card-desc">Save 15% with our 4-session package. Structured progression with ongoing assessment and custom programming.</p>
+                    <div class="program-card-meta">
+                        <span><i class="fas fa-clock"></i> 60 min each</span>
+                        <span><strong>$255/4 sessions</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 7: CTA ============ -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="fade-up">Ready to Lace Up?</h2>
+        <p class="fade-up">Book your first class today. New members get their first session absolutely free.</p>
+        <div class="cta-actions fade-up">
+            <a href="signup.html" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

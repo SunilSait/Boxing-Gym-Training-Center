@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — IronJaw Boxing Gym & Training Center</title>
+    <meta name="description" content="Get in touch with IronJaw Boxing Gym. Visit us, call, or send a message. Book your free trial class today.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>(function(){try{if(localStorage.getItem('ij-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('ij-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();</script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<!-- ============ SECTION 1: PAGE HERO ============ -->
+<section style="background:var(--secondary);padding:100px 0 60px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;z-index:0;"><img src="assets/images/boxing-equipment.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.15);"></div>
+    <div class="container" style="position:relative;z-index:2;">
+        <span class="section-badge" style="background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.3);backdrop-filter:blur(8px);"><i class="fas fa-envelope"></i> Get in Touch</span>
+        <h1 class="section-title fade-up" style="color:#fff;font-size:3rem;">Contact <span style="color:var(--primary-light);">Us</span></h1>
+        <p class="section-subtitle fade-up" style="color:rgba(255,255,255,0.6);">Have a question? Want to book a tour? We'd love to hear from you.</p>
+    </div>
+</section>
+
+<!-- ============ SECTION 2: CONTACT GRID ============ -->
+<section class="section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info-card fade-up">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:8px;">Get In Touch</h3>
+                <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:20px;font-weight:450;">We're here to answer your questions and help you get started on your boxing journey.</p>
+                
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Visit Us</h4>
+                        <p>742 Fight Street, Downtown<br>New York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Call Us</h4>
+                        <p>+1 (800) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Email Us</h4>
+                        <p>info@ironjaw.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Hours</h4>
+                        <p>Mon–Fri: 6:00 AM – 10:00 PM<br>Sat: 7:00 AM – 6:00 PM<br>Sun: 8:00 AM – 2:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="IronJaw Boxing Gym Location"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form fade-up delay-1">
+                <h3>Send a Message</h3>
+                <form onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.'); this.reset();">
+                    <div class="form-group">
+                        <label class="form-label" for="contactName">Full Name</label>
+                        <input type="text" class="form-input" id="contactName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contactEmail">Email Address</label>
+                        <input type="email" class="form-input" id="contactEmail" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contactPhone">Phone Number</label>
+                        <input type="tel" class="form-input" id="contactPhone" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contactSubject">Subject</label>
+                        <select class="form-input" id="contactSubject" required>
+                            <option value="">Select a subject</option>
+                            <option>Book a Free Trial</option>
+                            <option>Membership Inquiry</option>
+                            <option>Personal Training</option>
+                            <option>Youth Program</option>
+                            <option>Facility Tour</option>
+                            <option>General Question</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contactMsg">Message</label>
+                        <textarea class="form-textarea" id="contactMsg" placeholder="Tell us about your goals and how we can help..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 3: QUICK CONTACT CARDS ============ -->
+<section class="section section-alt">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-bolt"></i> Quick Actions</span>
+        <h2 class="section-title fade-up">Need Something <span style="color:var(--primary);">Specific?</span></h2>
+        <p class="section-subtitle fade-up">Use these shortcuts to get exactly what you need.</p>
+
+        <div class="bento-grid" style="grid-template-columns:repeat(3,1fr);">
+            <div class="bento-card fade-up" style="text-align:center;">
+                <div class="bento-card-icon" style="margin:0 auto 20px;"><i class="fas fa-calendar-check"></i></div>
+                <h3>Book a Free Class</h3>
+                <p>Ready to try? Book your free introductory class online in under a minute.</p>
+                <div style="margin-top:16px;"><a href="signup.html" class="btn btn-primary btn-sm">Book Now</a></div>
+            </div>
+            <div class="bento-card fade-up delay-1" style="text-align:center;">
+                <div class="bento-card-icon" style="margin:0 auto 20px;"><i class="fas fa-building"></i></div>
+                <h3>Schedule a Tour</h3>
+                <p>Want to see the gym before joining? Schedule a guided tour with our team.</p>
+                <div style="margin-top:16px;"><a href="tel:18001234567" class="btn btn-secondary btn-sm">Call Us</a></div>
+            </div>
+            <div class="bento-card fade-up delay-2" style="text-align:center;">
+                <div class="bento-card-icon" style="margin:0 auto 20px;"><i class="fas fa-handshake"></i></div>
+                <h3>Corporate Packages</h3>
+                <p>Looking for team-building or corporate wellness boxing programs?</p>
+                <div style="margin-top:16px;"><a href="mailto:info@ironjaw.com" class="btn btn-secondary btn-sm">Email Us</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 4: FAQ ============ -->
+<section class="section">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-circle-question"></i> FAQ</span>
+        <h2 class="section-title fade-up">Frequently <span style="color:var(--primary);">Asked</span></h2>
+        <p class="section-subtitle fade-up">Quick answers to common questions.</p>
+
+        <div class="faq-list">
+            <div class="faq-item fade-up">
+                <button class="faq-question">Is parking available? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Yes! We have a dedicated parking lot behind the building with 30+ spaces. Street parking is also available on Fight Street and surrounding blocks.</div></div>
+            </div>
+            <div class="faq-item fade-up delay-1">
+                <button class="faq-question">Can I drop in for a single class? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Yes. Drop-in sessions are available at $20/class. However, our monthly memberships offer much better value if you plan to train regularly.</div></div>
+            </div>
+            <div class="faq-item fade-up delay-2">
+                <button class="faq-question">Do you have shower facilities? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Yes. We have full locker rooms with showers, lockers, and changing areas for both men and women. Towel service is included with Fighter and Champion plans.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

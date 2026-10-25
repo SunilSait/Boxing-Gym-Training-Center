@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronJaw — Boxing Gym & Training Center</title>
+    <meta name="description" content="Train like a champion at IronJaw Boxing Gym. World-class coaches, elite group classes, personal training, and a community forged in grit and discipline.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function(){try{if(localStorage.getItem('ij-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('ij-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
+    </script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<!-- ============ HERO SLIDER ============ -->
+<section class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" aria-hidden="false">
+        <div class="hero-slide-bg"><img src="assets/images/hero-boxing-ring.jpg" alt="Boxing ring with athletes training"></div>
+        <div class="hero-slide-content">
+            <div class="hero-tag"><i class="fas fa-fire"></i> Forged in Fire</div>
+            <h1 class="hero-title">Unleash Your <span>Inner Fighter</span></h1>
+            <p class="hero-desc">Step into the ring at IronJaw. Elite coaching, raw energy, and a training ground where champions are built from the ground up.</p>
+            <div class="hero-actions">
+                <a href="classes.html" class="btn btn-primary btn-lg">Explore Classes</a>
+                <a href="pricing.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">View Plans</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+        <div class="hero-slide-bg"><img src="assets/images/hero2-sparring.jpg" alt="Two boxers sparring in ring"></div>
+        <div class="hero-slide-content">
+            <div class="hero-tag"><i class="fas fa-dumbbell"></i> Train Hard</div>
+            <h1 class="hero-title">Train Like a <span>Champion</span></h1>
+            <p class="hero-desc">From beginners to competitive fighters, our world-class trainers guide you every step — developing power, speed, and unstoppable confidence.</p>
+            <div class="hero-actions">
+                <a href="trainers.html" class="btn btn-primary btn-lg">Meet Trainers</a>
+                <a href="signup.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">Start Free Trial</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+        <div class="hero-slide-bg"><img src="assets/images/coach-training.jpg" alt="Coach training boxer in ring"></div>
+        <div class="hero-slide-content">
+            <div class="hero-tag"><i class="fas fa-shield-halved"></i> Expert Guidance</div>
+            <h1 class="hero-title">Personal <span>Training</span> Redefined</h1>
+            <p class="hero-desc">One-on-one sessions tailored to your goals. Our certified coaches bring out peak performance in every fighter they train.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary btn-lg">Book a Session</a>
+                <a href="classes.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">Class Schedule</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-controls">
+        <button class="hero-nav-btn" id="heroPrevBtn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <div class="hero-dots">
+            <div class="hero-dot active"><div class="hero-dot-fill"></div></div>
+            <div class="hero-dot"><div class="hero-dot-fill"></div></div>
+            <div class="hero-dot"><div class="hero-dot-fill"></div></div>
+        </div>
+        <button class="hero-nav-btn" id="heroNextBtn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
+
+<!-- ============ SECTION 2: MARQUEE ============ -->
+<div class="marquee-section">
+    <div class="marquee-track">
+        <span class="marquee-item">Boxing <span class="dot"></span></span>
+        <span class="marquee-item">Kickboxing <span class="dot"></span></span>
+        <span class="marquee-item">Personal Training <span class="dot"></span></span>
+        <span class="marquee-item">Strength & Conditioning <span class="dot"></span></span>
+        <span class="marquee-item">Cardio Boxing <span class="dot"></span></span>
+        <span class="marquee-item">Youth Programs <span class="dot"></span></span>
+        <span class="marquee-item">Competition Prep <span class="dot"></span></span>
+        <span class="marquee-item">Boxing <span class="dot"></span></span>
+        <span class="marquee-item">Kickboxing <span class="dot"></span></span>
+        <span class="marquee-item">Personal Training <span class="dot"></span></span>
+        <span class="marquee-item">Strength & Conditioning <span class="dot"></span></span>
+        <span class="marquee-item">Cardio Boxing <span class="dot"></span></span>
+        <span class="marquee-item">Youth Programs <span class="dot"></span></span>
+        <span class="marquee-item">Competition Prep <span class="dot"></span></span>
+    </div>
+</div>
+
+<!-- ============ SECTION 3: ABOUT SPLIT ============ -->
+<section class="section">
+    <div class="container">
+        <div class="split-row">
+            <div class="split-img slide-left">
+                <img src="assets/images/boxer-training-bag.jpg" alt="Boxer training with heavy bag">
+                <div class="split-accent"></div>
+            </div>
+            <div class="split-content slide-right">
+                <span class="section-badge"><i class="fas fa-boxing-glove"></i> Who We Are</span>
+                <h2>More Than a Gym — A <span style="color:var(--primary);">Fighting Family</span></h2>
+                <p>IronJaw was born from a belief that boxing isn't just a sport — it's a path to transformation. Our raw, no-frills training environment strips away distractions and pushes you beyond your limits.</p>
+                <div class="split-list">
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> 15+ years of professional coaching experience</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> State-of-the-art facility with 2 full-size rings</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Programs for all ages and skill levels</div>
+                    <div class="split-list-item"><i class="fas fa-check-circle"></i> Competitive fight team with championship record</div>
+                </div>
+                <a href="classes.html" class="btn btn-primary">View Programs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 4: STATS STRIP ============ -->
+<div class="stats-strip">
+    <div class="container">
+        <div class="stat-block fade-up">
+            <div class="stat-num" data-count="2500" data-suffix="+">0</div>
+            <div class="stat-label">Members Trained</div>
+        </div>
+        <div class="stat-block fade-up delay-1">
+            <div class="stat-num" data-count="15" data-suffix="+">0</div>
+            <div class="stat-label">Expert Coaches</div>
+        </div>
+        <div class="stat-block fade-up delay-2">
+            <div class="stat-num" data-count="48">0</div>
+            <div class="stat-label">Championships Won</div>
+        </div>
+        <div class="stat-block fade-up delay-3">
+            <div class="stat-num" data-count="12" data-suffix="+">0</div>
+            <div class="stat-label">Years Operating</div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ SECTION 5: PROGRAMS ============ -->
+<section class="section" id="programs">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-fire-flame-curved"></i> Our Programs</span>
+        <h2 class="section-title fade-up">Training Programs for <span style="color:var(--primary);">Every Level</span></h2>
+        <p class="section-subtitle fade-up">From your first jab to championship bouts — we've got a program designed for you.</p>
+
+        <div class="programs-grid">
+            <div class="program-card fade-up">
+                <div class="program-card-img">
+                    <img src="assets/images/group-boxing-class.jpg" alt="Group boxing class">
+                    <span class="program-card-level">Beginner</span>
+                </div>
+                <div class="program-card-body">
+                    <h3 class="program-card-title">Boxing Fundamentals</h3>
+                    <p class="program-card-desc">Master the basics — stance, footwork, jab-cross combinations, and defense. Perfect for newcomers ready to step up.</p>
+                    <div class="program-card-meta">
+                        <span><i class="fas fa-clock"></i> 60 min</span>
+                        <span><i class="fas fa-users"></i> 15 max</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card fade-up delay-1">
+                <div class="program-card-img">
+                    <img src="assets/images/boxing-cardio.jpg" alt="Cardio boxing session">
+                    <span class="program-card-level">Intermediate</span>
+                </div>
+                <div class="program-card-body">
+                    <h3 class="program-card-title">Cardio Boxing</h3>
+                    <p class="program-card-desc">High-intensity boxing-based cardio. Burn up to 800 calories per session while developing combat skills and endurance.</p>
+                    <div class="program-card-meta">
+                        <span><i class="fas fa-clock"></i> 45 min</span>
+                        <span><i class="fas fa-users"></i> 20 max</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card fade-up delay-2">
+                <div class="program-card-img">
+                    <img src="assets/images/coach-training.jpg" alt="Advanced sparring session">
+                    <span class="program-card-level">Advanced</span>
+                </div>
+                <div class="program-card-body">
+                    <h3 class="program-card-title">Competition Prep</h3>
+                    <p class="program-card-desc">Intensive fight preparation with sparring, strategy, and mental conditioning for competitive boxers.</p>
+                    <div class="program-card-meta">
+                        <span><i class="fas fa-clock"></i> 90 min</span>
+                        <span><i class="fas fa-users"></i> 8 max</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 6: BENTO FEATURES ============ -->
+<section class="section section-alt">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-gem"></i> Why IronJaw</span>
+        <h2 class="section-title fade-up">What Sets Us <span style="color:var(--primary);">Apart</span></h2>
+        <p class="section-subtitle fade-up">We don't just teach boxing — we build fighters from the inside out.</p>
+
+        <div class="bento-grid">
+            <div class="bento-card span-2 fade-up">
+                <div class="bento-card-icon"><i class="fas fa-trophy"></i></div>
+                <h3>Championship-Caliber Coaching</h3>
+                <p>Our trainers include former professional boxers, national champions, and certified coaches with decades of combined experience. Every session is backed by real fight knowledge.</p>
+            </div>
+            <div class="bento-card fade-up delay-1">
+                <div class="bento-card-icon"><i class="fas fa-dumbbell"></i></div>
+                <h3>Elite Facilities</h3>
+                <p>Two full-size rings, 30+ heavy bags, speed bags, and a fully equipped strength zone — all in a 10,000 sq ft industrial space.</p>
+            </div>
+            <div class="bento-card fade-up delay-2">
+                <div class="bento-card-icon"><i class="fas fa-users"></i></div>
+                <h3>All Levels Welcome</h3>
+                <p>Whether you're throwing your first punch or preparing for a title fight, our tiered programs meet you where you are.</p>
+            </div>
+            <div class="bento-card fade-up delay-3">
+                <div class="bento-card-icon"><i class="fas fa-heart-pulse"></i></div>
+                <h3>Fitness-First Approach</h3>
+                <p>Not every member wants to compete. Our cardio boxing and fitness classes deliver world-class workouts without the contact.</p>
+            </div>
+            <div class="bento-card span-2 fade-up delay-4">
+                <div class="bento-card-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Safety & Community</h3>
+                <p>Safety is paramount at IronJaw. Proper equipment, supervised sparring, and a supportive community ensure every member trains smart and leaves stronger. We're a family first.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 7: TRAINERS PREVIEW ============ -->
+<section class="section">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-user-shield"></i> Meet the Team</span>
+        <h2 class="section-title fade-up">Our <span style="color:var(--primary);">Expert Trainers</span></h2>
+        <p class="section-subtitle fade-up">Champions coaching champions. Meet the crew that will push you past your limits.</p>
+
+        <div class="trainers-grid">
+            <div class="trainer-card fade-up">
+                <div class="trainer-card-img"><img src="assets/images/trainer-1.jpg" alt="Marcus Johnson"></div>
+                <div class="trainer-card-body">
+                    <h3 class="trainer-card-name">Marcus Johnson</h3>
+                    <p class="trainer-card-role">Head Coach</p>
+                    <p class="trainer-card-desc">Former WBC middleweight contender. 15+ years coaching elite fighters.</p>
+                </div>
+            </div>
+            <div class="trainer-card fade-up delay-1">
+                <div class="trainer-card-img"><img src="assets/images/trainer-2.jpg" alt="Sofia Reyes"></div>
+                <div class="trainer-card-body">
+                    <h3 class="trainer-card-name">Sofia Reyes</h3>
+                    <p class="trainer-card-role">Boxing & Fitness Coach</p>
+                    <p class="trainer-card-desc">National champion and NASM-certified personal trainer specializing in boxing fitness.</p>
+                </div>
+            </div>
+            <div class="trainer-card fade-up delay-2">
+                <div class="trainer-card-img"><img src="assets/images/trainer-3.jpg" alt="Tommy O'Brien"></div>
+                <div class="trainer-card-body">
+                    <h3 class="trainer-card-name">Tommy O'Brien</h3>
+                    <p class="trainer-card-role">Youth Program Director</p>
+                    <p class="trainer-card-desc">35+ years in boxing. Developed over 200 amateur champions through youth programs.</p>
+                </div>
+            </div>
+            <div class="trainer-card fade-up delay-3">
+                <div class="trainer-card-img"><img src="assets/images/trainer-4.jpg" alt="Diego Castillo"></div>
+                <div class="trainer-card-body">
+                    <h3 class="trainer-card-name">Diego Castillo</h3>
+                    <p class="trainer-card-role">Strength & Conditioning</p>
+                    <p class="trainer-card-desc">CSCS-certified specialist focusing on fighter-specific athletic performance.</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:40px;" class="fade-up">
+            <a href="trainers.html" class="btn btn-secondary">View All Trainers <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 8: TESTIMONIALS ============ -->
+<section class="section section-alt">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-quote-left"></i> Testimonials</span>
+        <h2 class="section-title fade-up">What Our <span style="color:var(--primary);">Members Say</span></h2>
+        <p class="section-subtitle fade-up">Real stories from real fighters who found their strength at IronJaw.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"IronJaw completely changed my life. I walked in overweight and stressed — 8 months later I competed in my first amateur bout. The coaches here are on another level."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JR</div>
+                    <div>
+                        <div class="testimonial-name">Jake Rodriguez</div>
+                        <div class="testimonial-role">Amateur Boxer, 2 years</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up delay-1">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I joined for fitness but fell in love with the sport. The cardio boxing classes are intense, fun, and the community is incredibly supportive. Best decision ever."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AP</div>
+                    <div>
+                        <div class="testimonial-name">Amanda Park</div>
+                        <div class="testimonial-role">Fitness Member, 1 year</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up delay-2">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"My son trains in the youth program with Coach Tommy. His discipline, confidence, and focus have improved dramatically. Can't recommend it enough for young athletes."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DW</div>
+                    <div>
+                        <div class="testimonial-name">David Wilson</div>
+                        <div class="testimonial-role">Parent, Youth Program</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 9: GALLERY ============ -->
+<section class="section">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-images"></i> Gallery</span>
+        <h2 class="section-title fade-up">Inside <span style="color:var(--primary);">IronJaw</span></h2>
+        <p class="section-subtitle fade-up">A look at our gritty training environment and the fighters who call it home.</p>
+
+        <div class="gallery-grid fade-up">
+            <div class="gallery-item"><img src="assets/images/hero-boxing-ring.jpg" alt="Boxing ring"></div>
+            <div class="gallery-item"><img src="assets/images/boxing-cardio.jpg" alt="Boxing cardio"></div>
+            <div class="gallery-item"><img src="assets/images/gym-interior.jpg" alt="Gym interior"></div>
+            <div class="gallery-item"><img src="assets/images/boxer-training-bag.jpg" alt="Boxer training"></div>
+            <div class="gallery-item"><img src="assets/images/group-boxing-class.jpg" alt="Group class"></div>
+            <div class="gallery-item"><img src="assets/images/boxing-equipment.jpg" alt="Equipment"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 10: CTA ============ -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="fade-up">Ready to Step Into the Ring?</h2>
+        <p class="fade-up">Join IronJaw today and start your transformation. Your first class is on us.</p>
+        <div class="cta-actions fade-up">
+            <a href="signup.html" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 11: FAQ ============ -->
+<section class="section section-alt">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-circle-question"></i> FAQ</span>
+        <h2 class="section-title fade-up">Frequently Asked <span style="color:var(--primary);">Questions</span></h2>
+        <p class="section-subtitle fade-up">Everything you need to know before lacing up your gloves.</p>
+
+        <div class="faq-list">
+            <div class="faq-item fade-up">
+                <button class="faq-question">Do I need boxing experience to join? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Absolutely not! Our beginner programs are designed for people with zero experience. We'll teach you everything from proper stance and footwork to basic combinations. All skill levels are welcome at IronJaw.</div></div>
+            </div>
+            <div class="faq-item fade-up delay-1">
+                <button class="faq-question">What should I bring to my first class? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Wear comfortable workout clothes and athletic shoes. We provide boxing gloves and hand wraps for beginners. Bring a water bottle and a towel. As you progress, we recommend investing in your own gloves and wraps.</div></div>
+            </div>
+            <div class="faq-item fade-up delay-2">
+                <button class="faq-question">Will I get hit in class? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Our fitness and fundamental classes are non-contact. Sparring is only available in intermediate and advanced classes, and always under strict supervision with proper protective equipment. You control your level of contact.</div></div>
+            </div>
+            <div class="faq-item fade-up delay-3">
+                <button class="faq-question">What membership plans are available? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">We offer three main plans: Starter (group classes only), Fighter (unlimited classes + sparring), and Champion (all-inclusive with personal training). Visit our Membership page for full pricing details.</div></div>
+            </div>
+            <div class="faq-item fade-up delay-4">
+                <button class="faq-question">Can my kids join boxing classes? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer"><div class="faq-answer-inner">Yes! Our Youth Program accepts children ages 8–16. Led by Coach Tommy O'Brien, these classes focus on fitness, discipline, coordination, and fundamental boxing skills in a safe, encouraging environment.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+</body>
+</html>

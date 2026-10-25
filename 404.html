@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | IronJaw</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to IronJaw Boxing Gym homepage.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>(function(){try{if(localStorage.getItem('ij-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('ij-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();</script>
+</head>
+<body>
+
+<div class="error-page">
+    <div class="error-topbar">
+        <a href="index.html" class="nav-logo" aria-label="Go to homepage" style="position:absolute;left:24px;top:16px;">
+            <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C8102E"/><stop offset="100%" stop-color="#8B0000"/></linearGradient></defs>
+                <rect width="100" height="100" rx="18" fill="url(#logoBg)"/>
+                <path d="M32 30 Q32 20 40 20 L60 20 Q68 20 68 30 L68 55 Q68 72 50 78 Q32 72 32 55 Z" fill="none" stroke="white" stroke-width="5"/>
+                <path d="M42 38 L42 52 M58 38 L58 52" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <path d="M40 62 Q50 70 60 62" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            </svg>
+        </a>
+        <button onclick="toggleDir()" class="nav-icon-btn" id="rtlToggleNav" aria-label="Toggle RTL" title="Toggle RTL">
+            <span class="dir-indicator dir-label" style="font-size:0.625rem;font-weight:700;">RTL</span>
+        </button>
+        <button onclick="toggleTheme()" class="nav-icon-btn" id="darkToggleNav" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Round Over — Page Not Found</h1>
+        <p class="error-desc">The page you're looking for has left the ring. It might have been moved, deleted, or the URL could be incorrect.</p>
+        <div class="error-actions">
+            <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
+    </div>
+</div>
+
+<script src="components.js"></script>
+</body>
+</html>
