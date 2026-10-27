@@ -747,6 +747,14 @@ function initTabFilter() {
     const cards = document.querySelectorAll('.filter-card');
     if (!tabs.length || !cards.length) return;
 
+    function updateCenteredCards() {
+        const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+        cards.forEach(c => c.classList.remove('schedule-card-centered'));
+        if (visibleCards.length % 2 !== 0 && visibleCards.length > 1) {
+            visibleCards[visibleCards.length - 1].classList.add('schedule-card-centered');
+        }
+    }
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
@@ -769,8 +777,10 @@ function initTabFilter() {
                     card.style.display = 'none';
                 }
             });
+            updateCenteredCards();
         });
     });
+    updateCenteredCards();
 }
 
 // Global aliases
@@ -816,6 +826,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHero2Slider();
     initTabFilter();
     initScheduleFilter();
+    initMobileScheduleTabs();
 
     if (page === 'coming-soon.html') initCountdown();
 });
@@ -845,6 +856,27 @@ function initScheduleFilter() {
                     row.style.display = 'none';
                 }
             });
+        });
+    });
+}
+
+/* ---- MOBILE TIMETABLE DAY TABS ---- */
+function initMobileScheduleTabs() {
+    const tabs = document.querySelectorAll('.mobile-sched-tab');
+    const panels = document.querySelectorAll('.mobile-sched-panel');
+    if (!tabs.length || !panels.length) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+            panels.forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            const day = tab.getAttribute('data-day');
+            const target = document.getElementById('day-' + day);
+            if (target) {
+                target.classList.add('active');
+            }
         });
     });
 }
