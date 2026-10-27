@@ -274,12 +274,12 @@
 
                 <!-- Category Filters -->
                 <div class="dash-filter-pills" id="classFilterPills">
-                    <button type="button" class="dash-filter-pill active" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-layer-group"></i> All Sessions (7)</button>
-                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-shield-halved"></i> Fundamentals</button>
-                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-fire"></i> Cardio Blast</button>
-                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-hand-fist"></i> Mitt Work</button>
-                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-dumbbell"></i> S&C Training</button>
-                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-trophy"></i> Sparring</button>
+                    <button type="button" class="dash-filter-pill active" onclick="filterClasses('all', this)"><i class="fas fa-layer-group"></i> All Sessions (7)</button>
+                    <button type="button" class="dash-filter-pill" onclick="filterClasses('fundamentals', this)"><i class="fas fa-shield-halved"></i> Fundamentals</button>
+                    <button type="button" class="dash-filter-pill" onclick="filterClasses('cardio', this)"><i class="fas fa-fire"></i> Cardio Blast</button>
+                    <button type="button" class="dash-filter-pill" onclick="filterClasses('mittwork', this)"><i class="fas fa-hand-fist"></i> Mitt Work</button>
+                    <button type="button" class="dash-filter-pill" onclick="filterClasses('sc', this)"><i class="fas fa-dumbbell"></i> S&C Training</button>
+                    <button type="button" class="dash-filter-pill" onclick="filterClasses('sparring', this)"><i class="fas fa-trophy"></i> Sparring</button>
                 </div>
 
                 <div class="dash-table-wrap">
@@ -287,18 +287,120 @@
                         <h3>Available Classes This Week</h3>
                         <span class="dash-status active">Live Schedule</span>
                     </div>
-                    <table class="dash-table">
+                    <table class="dash-table dash-table-desktop">
                         <thead><tr><th>Class</th><th>Day</th><th>Time</th><th>Coach</th><th>Spots</th><th>Action</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Boxing Fundamentals</strong></td><td>Monday</td><td>6:00 AM</td><td>Marcus J.</td><td>8/15</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
-                            <tr><td><strong>Cardio Blast</strong></td><td>Tuesday</td><td>7:00 AM</td><td>Sofia R.</td><td>12/20</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
-                            <tr><td><strong>Mitt Work & Combos</strong></td><td>Wednesday</td><td>12:00 PM</td><td>Diego C.</td><td>5/12</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
-                            <tr><td><strong>S&C Training</strong></td><td>Thursday</td><td>8:00 AM</td><td>Diego C.</td><td>9/16</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
-                            <tr><td><strong>Sparring Session</strong></td><td>Friday</td><td>5:00 PM</td><td>Marcus J.</td><td>3/8</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
-                            <tr><td><strong>Fundamentals</strong></td><td>Friday</td><td>6:00 PM</td><td>Marcus J.</td><td>7/15</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
-                            <tr><td><strong>S&C + Sparring</strong></td><td>Saturday</td><td>8:00 AM</td><td>Diego C.</td><td>10/16</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="fundamentals"><td><strong>Boxing Fundamentals</strong></td><td>Monday</td><td>6:00 AM</td><td>Marcus J.</td><td>8/15</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="cardio"><td><strong>Cardio Blast</strong></td><td>Tuesday</td><td>7:00 AM</td><td>Sofia R.</td><td>12/20</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="mittwork"><td><strong>Mitt Work & Combos</strong></td><td>Wednesday</td><td>12:00 PM</td><td>Diego C.</td><td>5/12</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="sc"><td><strong>S&C Training</strong></td><td>Thursday</td><td>8:00 AM</td><td>Diego C.</td><td>9/16</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="sparring"><td><strong>Sparring Session</strong></td><td>Friday</td><td>5:00 PM</td><td>Marcus J.</td><td>3/8</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="fundamentals"><td><strong>Fundamentals</strong></td><td>Friday</td><td>6:00 PM</td><td>Marcus J.</td><td>7/15</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
+                            <tr data-category="sc"><td><strong>S&C + Sparring</strong></td><td>Saturday</td><td>8:00 AM</td><td>Diego C.</td><td>10/16</td><td><button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button></td></tr>
                         </tbody>
                     </table>
+
+                    <!-- Mobile Class Cards (Zero Sidescroll) -->
+                    <div class="dash-mobile-cards-wrap">
+                        <div class="dash-card-item" data-category="fundamentals">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Boxing Fundamentals</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Monday</span>
+                                    <span><i class="fas fa-clock"></i> 6:00 AM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Marcus J.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 8/15 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item" data-category="cardio">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Cardio Blast</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Tuesday</span>
+                                    <span><i class="fas fa-clock"></i> 7:00 AM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Sofia R.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 12/20 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item" data-category="mittwork">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Mitt Work & Combos</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Wednesday</span>
+                                    <span><i class="fas fa-clock"></i> 12:00 PM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Diego C.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 5/12 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item" data-category="sc">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">S&C Training</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Thursday</span>
+                                    <span><i class="fas fa-clock"></i> 8:00 AM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Diego C.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 9/16 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item" data-category="sparring">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Sparring Session</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Friday</span>
+                                    <span><i class="fas fa-clock"></i> 5:00 PM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Marcus J.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 3/8 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item" data-category="fundamentals">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Fundamentals</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Friday</span>
+                                    <span><i class="fas fa-clock"></i> 6:00 PM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Marcus J.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 7/15 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item" data-category="sc">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">S&C + Sparring</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-calendar-day"></i> Saturday</span>
+                                    <span><i class="fas fa-clock"></i> 8:00 AM</span>
+                                    <span><i class="fas fa-user-ninja"></i> Diego C.</span>
+                                    <span class="dash-card-badge"><i class="fas fa-users"></i> 10/16 spots</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Class booked!')">Book</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="dash-table-wrap" style="margin-top:24px;">
@@ -306,7 +408,7 @@
                         <h3>Personal Training Sessions</h3>
                         <span style="font-size:0.8rem;color:var(--text-muted);">1-on-1 Ring Coaching</span>
                     </div>
-                    <table class="dash-table">
+                    <table class="dash-table dash-table-desktop">
                         <thead><tr><th>Coach</th><th>Available Slots</th><th>Duration</th><th>Price</th><th>Action</th></tr></thead>
                         <tbody>
                             <tr><td><strong>Marcus Johnson</strong></td><td>Tue/Thu 2–4 PM</td><td>60 min</td><td>$75</td><td><button class="btn btn-secondary btn-sm" onclick="alert('PT session request sent!')">Request</button></td></tr>
@@ -314,6 +416,49 @@
                             <tr><td><strong>Diego Castillo</strong></td><td>Mon–Fri 1–3 PM</td><td>60 min</td><td>$70</td><td><button class="btn btn-secondary btn-sm" onclick="alert('PT session request sent!')">Request</button></td></tr>
                         </tbody>
                     </table>
+
+                    <!-- Mobile PT Cards (Zero Sidescroll) -->
+                    <div class="dash-mobile-cards-wrap">
+                        <div class="dash-card-item">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Marcus Johnson</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-clock"></i> Tue/Thu 2–4 PM</span>
+                                    <span><i class="fas fa-stopwatch"></i> 60 min</span>
+                                    <span class="dash-card-badge">$75 / session</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-secondary btn-sm" onclick="alert('PT session request sent!')">Request</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Sofia Reyes</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-clock"></i> Mon/Wed 10 AM–12 PM</span>
+                                    <span><i class="fas fa-stopwatch"></i> 60 min</span>
+                                    <span class="dash-card-badge">$70 / session</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-secondary btn-sm" onclick="alert('PT session request sent!')">Request</button>
+                            </div>
+                        </div>
+                        <div class="dash-card-item">
+                            <div class="dash-card-info">
+                                <div class="dash-card-title">Diego Castillo</div>
+                                <div class="dash-card-meta">
+                                    <span><i class="fas fa-clock"></i> Mon–Fri 1–3 PM</span>
+                                    <span><i class="fas fa-stopwatch"></i> 60 min</span>
+                                    <span class="dash-card-badge">$70 / session</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-action">
+                                <button class="btn btn-secondary btn-sm" onclick="alert('PT session request sent!')">Request</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Bookings Row 2: Active Reservations & Bag Station Booker -->
@@ -421,7 +566,7 @@
                         <h3>Workout History</h3>
                         <button type="button" class="btn btn-secondary btn-sm" onclick="alert('Exporting full workout history CSV file...')"><i class="fas fa-download"></i> Export CSV</button>
                     </div>
-                    <table class="dash-table">
+                    <table class="dash-table dash-table-desktop">
                         <thead><tr><th>Date</th><th>Class</th><th>Coach</th><th>Duration</th><th>Calories</th><th>Notes</th></tr></thead>
                         <tbody>
                             <tr><td>Oct 25, 2024</td><td>Cardio Boxing</td><td>Sofia R.</td><td>45 min</td><td>680</td><td>Great intensity</td></tr>
@@ -433,6 +578,94 @@
                             <tr><td>Oct 15, 2024</td><td>Fundamentals</td><td>Marcus J.</td><td>60 min</td><td>430</td><td>Footwork drills</td></tr>
                         </tbody>
                     </table>
+
+                    <!-- Mobile Workout Cards (Zero Sidescroll) -->
+                    <div class="dash-mobile-cards-wrap">
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>Cardio Boxing</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 45 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 25, 2024</span>
+                                <span><i class="fas fa-user"></i> Sofia R.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 680 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> Great intensity</div>
+                        </div>
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>Mitt Work</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 60 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 24, 2024</span>
+                                <span><i class="fas fa-user"></i> Diego C.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 520 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> Improved jab speed</div>
+                        </div>
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>Fundamentals</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 60 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 22, 2024</span>
+                                <span><i class="fas fa-user"></i> Marcus J.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 450 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> Worked on defense</div>
+                        </div>
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>S&C Training</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 50 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 21, 2024</span>
+                                <span><i class="fas fa-user"></i> Diego C.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 580 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> PR on battle ropes</div>
+                        </div>
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>Sparring</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 90 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 18, 2024</span>
+                                <span><i class="fas fa-user"></i> Marcus J.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 820 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> 3 rounds controlled</div>
+                        </div>
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>Cardio Boxing</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 45 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 17, 2024</span>
+                                <span><i class="fas fa-user"></i> Sofia R.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 650 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> Consistent pace</div>
+                        </div>
+                        <div class="dash-workout-card-item">
+                            <div class="dash-workout-head">
+                                <strong>Fundamentals</strong>
+                                <span class="dash-workout-duration"><i class="fas fa-stopwatch"></i> 60 min</span>
+                            </div>
+                            <div class="dash-workout-meta">
+                                <span><i class="fas fa-calendar-day"></i> Oct 15, 2024</span>
+                                <span><i class="fas fa-user"></i> Marcus J.</span>
+                                <span><i class="fas fa-fire" style="color:var(--primary);"></i> 430 kcal</span>
+                            </div>
+                            <div class="dash-workout-notes"><i class="fas fa-comment-dots"></i> Footwork drills</div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Personal Records & Athletic Benchmarks -->
@@ -1038,6 +1271,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         document.addEventListener('click', () => notifDropdown.classList.remove('open'));
     }
+
+    // Category filter for bookings (supports both desktop table and mobile cards)
+    window.filterClasses = function(category, btn) {
+        if (btn) {
+            btn.parentElement.querySelectorAll('.dash-filter-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+        document.querySelectorAll('.dash-table-desktop tbody tr[data-category]').forEach(tr => {
+            tr.style.display = (!category || category === 'all' || tr.dataset.category === category) ? '' : 'none';
+        });
+        document.querySelectorAll('.dash-mobile-cards-wrap .dash-card-item[data-category]').forEach(card => {
+            card.style.display = (!category || category === 'all' || card.dataset.category === category) ? 'flex' : 'none';
+        });
+    };
 
     // Logout modal
     const logoutBtn = document.getElementById('logoutTriggerBtn');
