@@ -1158,9 +1158,17 @@ p { font-weight: 400; color: var(--text-secondary); }
     margin-bottom: 20px;
     backdrop-filter: blur(8px);
 }
-.dark .hero-tag {
+.dark .hero-tag,
+.hero2 .hero-tag,
+.hero2-slide .hero-tag,
+.hero2-text .hero-tag {
     background: rgba(132, 204, 22, 0.18);
-    border-color: rgba(132, 204, 22, 0.35);
+    border-color: rgba(132, 204, 22, 0.45);
+    color: var(--primary-light);
+}
+.hero2 .hero-tag i,
+.hero2-slide .hero-tag i,
+.hero2-text .hero-tag i {
     color: var(--primary-light);
 }
 .hero-title {
@@ -1727,6 +1735,27 @@ p { font-weight: 400; color: var(--text-secondary); }
     align-items: center;
 }
 .hero2-text { max-width: 560px; }
+.hero2-text .hero-tag {
+    background: rgba(132, 204, 22, 0.18);
+    border: 1px solid rgba(132, 204, 22, 0.45);
+    color: var(--primary-light);
+    box-shadow: 0 0 16px rgba(132, 204, 22, 0.15);
+}
+.hero2-text .hero-tag i {
+    color: var(--primary-light);
+}
+.hero2 .hero-actions .btn-secondary,
+.hero2-text .btn-secondary {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+.hero2 .hero-actions .btn-secondary:hover,
+.hero2-text .btn-secondary:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(132, 204, 22, 0.14);
+}
 .hero2-title {
     font-size: 3.8rem;
     font-weight: 600;
@@ -3084,6 +3113,18 @@ select.form-input option,
     padding: 7px 14px;
     flex: 1;
     justify-content: center;
+}
+.live-map-floating-overlay .btn-secondary,
+.live-map-floating-cta .btn-secondary {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+.live-map-floating-overlay .btn-secondary:hover,
+.live-map-floating-cta .btn-secondary:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(132, 204, 22, 0.16);
 }
 
 /* Feature Grid below map */
@@ -5666,6 +5707,18 @@ body.auth-page {
     flex-wrap: wrap;
     margin-bottom: 24px;
 }
+.cta-classes-card .btn-secondary,
+.cta-classes-actions .btn-secondary {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+.cta-classes-card .btn-secondary:hover,
+.cta-classes-actions .btn-secondary:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(132, 204, 22, 0.14);
+}
 .cta-classes-trust {
     display: flex;
     align-items: center;
@@ -5936,14 +5989,14 @@ body.auth-page {
 [dir="rtl"] .timeline::before {
     left: 50%;
     right: auto;
-    transform: translateX(50%);
+    transform: translateX(-50%);
 }
 [dir="rtl"] .timeline-item:nth-child(odd) {
     left: auto;
     right: 0;
     padding-right: 0;
     padding-left: 48px;
-    text-align: right;
+    text-align: left;
 }
 [dir="rtl"] .timeline-item:nth-child(odd)::before {
     right: auto;
@@ -5954,7 +6007,7 @@ body.auth-page {
     right: 50%;
     padding-left: 0;
     padding-right: 48px;
-    text-align: left;
+    text-align: right;
 }
 [dir="rtl"] .timeline-item:nth-child(even)::before {
     left: auto;
