@@ -19,54 +19,151 @@
 
 <div id="navbar-placeholder"></div>
 
-<!-- ============ HERO 2 — PREMIUM ============ -->
-<section class="hero2">
-    <div class="hero2-bg"><img src="assets/images/hero2-sparring.jpg" alt="Intense boxing sparring match"></div>
+<!-- ============ HERO 2 — PREMIUM SLIDER ============ -->
+<section class="hero2" id="hero2Slider" aria-label="IronJaw Highlights Carousel">
+    <div class="hero2-bg"><img src="assets/images/hero2-arena-bg.jpg" alt="Atmospheric IronJaw boxing gym arena"></div>
     <div class="hero2-overlay"></div>
-    <div class="hero2-content">
-        <div class="hero2-text">
-            <div class="hero-tag"><i class="fas fa-crown"></i> Premium Experience</div>
-            <h1 class="hero2-title">Where <span>Grit</span> Meets <span>Greatness</span></h1>
-            <p class="hero2-desc">IronJaw isn't just a gym — it's a forge. We strip away the noise and build champions through raw discipline, expert coaching, and relentless pursuit of peak performance.</p>
-            <div class="hero-actions">
-                <a href="signup.html" class="btn btn-primary btn-lg">Start Free Trial</a>
-                <a href="#video-section" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);"><i class="fas fa-play"></i> Watch Story</a>
-            </div>
-            <div class="hero2-stats">
-                <div>
-                    <div class="hero2-stat-num" data-count="2500" data-suffix="+">0</div>
-                    <div class="hero2-stat-label">Athletes Trained</div>
+
+    <div class="hero2-slides-wrap">
+        <!-- SLIDE 1: GRIT & GREATNESS -->
+        <div class="hero2-slide active" data-slide="0" aria-hidden="false">
+            <div class="hero2-content">
+                <div class="hero2-text">
+                    <div class="hero-tag"><i class="fas fa-crown"></i> Premium Experience</div>
+                    <h1 class="hero2-title">Where <span>Grit</span> Meets <span>Greatness</span></h1>
+                    <p class="hero2-desc">IronJaw isn't just a gym — it's a forge. We strip away the noise and build champions through raw discipline, expert coaching, and relentless pursuit of peak performance.</p>
+                    <div class="hero-actions">
+                        <a href="signup.html" class="btn btn-primary btn-lg">Start Free Trial</a>
+                        <a href="#video-section" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);"><i class="fas fa-play"></i> Watch Story</a>
+                    </div>
                 </div>
-                <div>
-                    <div class="hero2-stat-num" data-count="48">0</div>
-                    <div class="hero2-stat-label">Championships</div>
-                </div>
-                <div>
-                    <div class="hero2-stat-num" data-count="15" data-suffix="+">0</div>
-                    <div class="hero2-stat-label">Pro Coaches</div>
+                <div class="hero2-image-wrap">
+                    <div class="hero2-img-grid">
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-heavy-bag.jpg" alt="Boxer heavy bag power training" loading="eager">
+                            <span class="hero2-grid-badge"><i class="fas fa-dumbbell"></i> Heavy Bag</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-mitt-work.jpg" alt="Precision mitt work sparring" loading="eager">
+                            <span class="hero2-grid-badge"><i class="fas fa-bolt"></i> Mitt Work</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-ring-sparring.jpg" alt="Ring sparring instruction" loading="eager">
+                            <span class="hero2-grid-badge"><i class="fas fa-shield-halved"></i> Ring IQ</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-fight-gear.jpg" alt="Championship gloves and gear" loading="eager">
+                            <span class="hero2-grid-badge"><i class="fas fa-fire"></i> Pro Gear</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hero2-image-wrap">
-            <img src="assets/images/boxer-training-bag.jpg" alt="Boxer training with bag">
+
+        <!-- SLIDE 2: CONDITIONING & SPEED -->
+        <div class="hero2-slide" data-slide="1" aria-hidden="true">
+            <div class="hero2-content">
+                <div class="hero2-text">
+                    <div class="hero-tag"><i class="fas fa-bolt"></i> High-Voltage Conditioning</div>
+                    <h1 class="hero2-title">Forge <span>Power</span>, Speed & <span>Stamina</span></h1>
+                    <p class="hero2-desc">Engineered for athletes who demand more. Push beyond mental barriers with explosive speed drills, metabolic combat conditioning, and sharp combination flow.</p>
+                    <div class="hero-actions">
+                        <a href="classes.html" class="btn btn-primary btn-lg">Explore Classes</a>
+                        <a href="pricing.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);"><i class="fas fa-tags"></i> Membership Plans</a>
+                    </div>
+                </div>
+                <div class="hero2-image-wrap">
+                    <div class="hero2-img-grid">
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-speed-drills.jpg" alt="Boxer speed bag fast drills" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-stopwatch"></i> Speed Bag</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-battle-ropes.jpg" alt="Combat conditioning battle ropes" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-dumbbell"></i> Battle Ropes</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-shadow-boxing.jpg" alt="Boxer shadow boxing technique" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-person-running"></i> Shadow Boxing</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-pad-combos.jpg" alt="Coach focus mitt combinations" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-bullseye"></i> Pad Combos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- SLIDE 3: RING MASTERY & TACTICS -->
+        <div class="hero2-slide" data-slide="2" aria-hidden="true">
+            <div class="hero2-content">
+                <div class="hero2-text">
+                    <div class="hero-tag"><i class="fas fa-trophy"></i> Championship Caliber</div>
+                    <h1 class="hero2-title">Master The <span>Ring</span>, Own The <span>Fight</span></h1>
+                    <p class="hero2-desc">From precision angles and slip counters to fight-tested ring generalship. Train side-by-side with championship coaches who refine your technique every single round.</p>
+                    <div class="hero-actions">
+                        <a href="trainers.html" class="btn btn-primary btn-lg">Meet The Coaches</a>
+                        <a href="contact.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);"><i class="fas fa-calendar-check"></i> Book Assessment</a>
+                    </div>
+                </div>
+                <div class="hero2-image-wrap">
+                    <div class="hero2-img-grid">
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-slip-defense.jpg" alt="Boxer slip and counter defense" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-shield-halved"></i> Slip & Counter</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-corner-coach.jpg" alt="Coach ring corner tactical guidance" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-user-tie"></i> Corner IQ</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-power-punch.jpg" alt="Devastating body punch power" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-hand-fist"></i> Body Assault</span>
+                        </div>
+                        <div class="hero2-grid-card">
+                            <img src="assets/images/hero2-ring-tactics.jpg" alt="Ring tactics and footwork craft" loading="lazy">
+                            <span class="hero2-grid-badge"><i class="fas fa-shoe-prints"></i> Footwork Craft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="hero2-controls">
+        <button class="hero2-nav-btn" id="hero2PrevBtn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <div class="hero2-dots">
+            <div class="hero2-dot active" data-index="0" role="button" tabindex="0" aria-label="Go to Slide 1"><div class="hero2-dot-fill"></div></div>
+            <div class="hero2-dot" data-index="1" role="button" tabindex="0" aria-label="Go to Slide 2"><div class="hero2-dot-fill"></div></div>
+            <div class="hero2-dot" data-index="2" role="button" tabindex="0" aria-label="Go to Slide 3"><div class="hero2-dot-fill"></div></div>
+        </div>
+        <button class="hero2-nav-btn" id="hero2NextBtn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
     </div>
 </section>
 
-<!-- ============ SECTION 2: PARTNER LOGO BAR ============ -->
-<section class="section" style="padding:40px 0;">
-    <div class="container text-center">
-        <p style="font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:24px;font-weight:500;">Trusted By Leading Sports Organizations</p>
-        <div class="logo-bar fade-up">
-            <span class="logo-bar-item">EVERLAST</span>
-            <span class="logo-bar-item">RINGSIDE</span>
-            <span class="logo-bar-item">TITLE BOXING</span>
-            <span class="logo-bar-item">VENUM</span>
-            <span class="logo-bar-item">CLETO REYES</span>
-            <span class="logo-bar-item">WINNING</span>
+<!-- ============ SECTION 2: STATS STRIP ============ -->
+<div class="stats-strip">
+    <div class="container">
+        <div class="stat-block fade-up">
+            <div class="stat-num" data-count="2500" data-suffix="+">0</div>
+            <div class="stat-label">Members Trained</div>
+        </div>
+        <div class="stat-block fade-up delay-1">
+            <div class="stat-num" data-count="15" data-suffix="+">0</div>
+            <div class="stat-label">Expert Coaches</div>
+        </div>
+        <div class="stat-block fade-up delay-2">
+            <div class="stat-num" data-count="48">0</div>
+            <div class="stat-label">Championships Won</div>
+        </div>
+        <div class="stat-block fade-up delay-3">
+            <div class="stat-num" data-count="12" data-suffix="+">0</div>
+            <div class="stat-label">Years Operating</div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- ============ SECTION 3: ABOUT — REVERSED SPLIT ============ -->
 <section class="section section-alt">
@@ -82,7 +179,7 @@
                 </div>
             </div>
             <div class="split-img slide-right">
-                <img src="assets/images/gym-interior.jpg" alt="IronJaw gym interior">
+                <img src="assets/images/home2-about-forge.jpg" alt="IronJaw authentic Forge gym interior" loading="lazy">
                 <div class="split-accent"></div>
             </div>
         </div>
@@ -129,8 +226,7 @@
         <p class="section-subtitle fade-up">See the energy, the dedication, and the community that makes IronJaw different.</p>
 
         <div class="video-embed fade-up">
-            <img src="assets/images/hero-boxing-ring.jpg" alt="IronJaw gym video thumbnail">
-            <button class="video-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
+            <img src="assets/images/home2-video-thumb.jpg" alt="IronJaw gym documentary video thumbnail" loading="lazy">
         </div>
     </div>
 </section>
@@ -145,7 +241,7 @@
         <div class="programs-grid">
             <div class="program-card fade-up">
                 <div class="program-card-img">
-                    <img src="assets/images/group-boxing-class.jpg" alt="Group boxing fundamentals">
+                    <img src="assets/images/home2-fundamentals-class.jpg" alt="Group boxing fundamentals class" loading="lazy">
                     <span class="program-card-level">All Levels</span>
                 </div>
                 <div class="program-card-body">
@@ -159,7 +255,7 @@
             </div>
             <div class="program-card fade-up delay-1">
                 <div class="program-card-img">
-                    <img src="assets/images/boxing-cardio.jpg" alt="Boxing mitt work session">
+                    <img src="assets/images/home2-mitt-combos.jpg" alt="Boxing mitt work and combination striking" loading="lazy">
                     <span class="program-card-level">Intermediate</span>
                 </div>
                 <div class="program-card-body">
@@ -173,7 +269,7 @@
             </div>
             <div class="program-card fade-up delay-2">
                 <div class="program-card-img">
-                    <img src="assets/images/hero2-sparring.jpg" alt="Sparring session">
+                    <img src="assets/images/home2-fight-team.jpg" alt="Technical fight team sparring session" loading="lazy">
                     <span class="program-card-level">Advanced</span>
                 </div>
                 <div class="program-card-body">
@@ -189,8 +285,87 @@
     </div>
 </section>
 
-<!-- ============ SECTION 7: TIMELINE ============ -->
-<section class="section section-alt">
+<!-- ============ SECTION 7: FIGHTER PROGRESSION ============ -->
+<section class="section section-alt" id="fighter-progression">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-stairs"></i> The Ladder</span>
+        <h2 class="section-title fade-up">From First Jab to <span style="color:var(--primary);">Title Belts</span></h2>
+        <p class="section-subtitle fade-up">A proven 4-stage combat curriculum designed to advance you from day one to fight ready.</p>
+
+        <div class="progression-ladder-grid">
+            <!-- Tier 1 -->
+            <div class="progression-tier-card fade-up">
+                <span class="progression-tier-badge tier-1-badge">White Wrap</span>
+                <span class="progression-tier-step">Level 01</span>
+                <h3 class="progression-tier-name">Novice Foundation</h3>
+                <span class="progression-tier-timeline"><i class="fas fa-clock"></i> Weeks 1 – 8</span>
+                <p class="progression-tier-desc">Master core fight posture, weight distribution, jab-cross mechanics, and basic evasion drills.</p>
+                <ul class="progression-skills-list">
+                    <li><i class="fas fa-check"></i> Athletic boxing stance & balance</li>
+                    <li><i class="fas fa-check"></i> 1-2 straight punch mechanics</li>
+                    <li><i class="fas fa-check"></i> Basic high guard & slip drills</li>
+                </ul>
+                <div class="progression-milestone-box">
+                    <i class="fas fa-award"></i> Ring Clearance Exam
+                </div>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="progression-tier-card fade-up delay-1">
+                <span class="progression-tier-badge tier-2-badge">Blue Wrap</span>
+                <span class="progression-tier-step">Level 02</span>
+                <h3 class="progression-tier-name">The Contender</h3>
+                <span class="progression-tier-timeline"><i class="fas fa-clock"></i> Months 2 – 6</span>
+                <p class="progression-tier-desc">Develop kinetic power, liver hooks, inside rolls, pivoting angles, and heavy bag output cadence.</p>
+                <ul class="progression-skills-list">
+                    <li><i class="fas fa-check"></i> Hooks, uppercuts & body shots</li>
+                    <li><i class="fas fa-check"></i> Bob-and-weave defensive rolls</li>
+                    <li><i class="fas fa-check"></i> 6-round endurance conditioning</li>
+                </ul>
+                <div class="progression-milestone-box">
+                    <i class="fas fa-award"></i> Light Sparring Certified
+                </div>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="progression-tier-card fade-up delay-2">
+                <span class="progression-tier-badge tier-3-badge">Black Wrap</span>
+                <span class="progression-tier-step">Level 03</span>
+                <h3 class="progression-tier-name">The Striker</h3>
+                <span class="progression-tier-timeline"><i class="fas fa-clock"></i> Months 6 – 12</span>
+                <p class="progression-tier-desc">Learn counter-punching, ring generalship, baiting opponent rhythm, and technical live pad work.</p>
+                <ul class="progression-skills-list">
+                    <li><i class="fas fa-check"></i> Counter-striking & rhythm disruption</li>
+                    <li><i class="fas fa-check"></i> Ring cut-off & trap positioning</li>
+                    <li><i class="fas fa-check"></i> High-intensity technical sparring</li>
+                </ul>
+                <div class="progression-milestone-box">
+                    <i class="fas fa-award"></i> Fight Camp Invitation
+                </div>
+            </div>
+
+            <!-- Tier 4 -->
+            <div class="progression-tier-card fade-up delay-3">
+                <span class="progression-tier-badge tier-4-badge">Volt Gold</span>
+                <span class="progression-tier-step">Level 04</span>
+                <h3 class="progression-tier-name">IronJaw Elite</h3>
+                <span class="progression-tier-timeline"><i class="fas fa-clock"></i> 1+ Year Active</span>
+                <p class="progression-tier-desc">Compete in sanctioned amateur or professional bouts with full corner support, fight camps, and video analysis.</p>
+                <ul class="progression-skills-list">
+                    <li><i class="fas fa-check"></i> Sanctioned Golden Gloves bouts</li>
+                    <li><i class="fas fa-check"></i> Dedicated head coach cornering</li>
+                    <li><i class="fas fa-check"></i> 10-round championship stamina</li>
+                </ul>
+                <div class="progression-milestone-box" style="border-color:var(--primary);background:rgba(132,204,22,0.08);">
+                    <i class="fas fa-trophy" style="color:var(--primary);"></i> Sanctioned Belt Contender
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 8: TIMELINE ============ -->
+<section class="section">
     <div class="container text-center">
         <span class="section-badge fade-up"><i class="fas fa-landmark"></i> Our History</span>
         <h2 class="section-title fade-up">The <span style="color:var(--primary);">IronJaw</span> Story</h2>
@@ -227,16 +402,16 @@
     </div>
 </section>
 
-<!-- ============ SECTION 8: COACHES ============ -->
-<section class="section">
+<!-- ============ SECTION 9: COACHES ============ -->
+<section class="section section-alt">
     <div class="container text-center">
         <span class="section-badge fade-up"><i class="fas fa-star"></i> Elite Coaches</span>
         <h2 class="section-title fade-up">Trained by the <span style="color:var(--primary);">Best</span></h2>
         <p class="section-subtitle fade-up">Our coaches bring real fight experience and professional certifications to every session.</p>
 
-        <div class="trainers-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 700px; margin: 0 auto;">
+        <div class="trainers-grid trainers-grid-3">
             <div class="trainer-card fade-up">
-                <div class="trainer-card-img"><img src="assets/images/trainer-1.jpg" alt="Marcus Johnson"></div>
+                <div class="trainer-card-img"><img src="assets/images/trainer-marcus-action.jpg" alt="Marcus Johnson in coaching guard" loading="lazy"></div>
                 <div class="trainer-card-body">
                     <h3 class="trainer-card-name">Marcus Johnson</h3>
                     <p class="trainer-card-role">Head Coach & Founder</p>
@@ -248,7 +423,7 @@
                 </div>
             </div>
             <div class="trainer-card fade-up delay-1">
-                <div class="trainer-card-img"><img src="assets/images/trainer-2.jpg" alt="Sofia Reyes"></div>
+                <div class="trainer-card-img"><img src="assets/images/trainer-sofia-action.jpg" alt="Sofia Reyes in active stance" loading="lazy"></div>
                 <div class="trainer-card-body">
                     <h3 class="trainer-card-name">Sofia Reyes</h3>
                     <p class="trainer-card-role">Lead Women's Coach</p>
@@ -259,6 +434,18 @@
                     </div>
                 </div>
             </div>
+            <div class="trainer-card fade-up delay-2">
+                <div class="trainer-card-img"><img src="assets/images/trainer-tommy-action.jpg" alt="Tommy O'Brien in active coaching guard" loading="lazy"></div>
+                <div class="trainer-card-body">
+                    <h3 class="trainer-card-name">Tommy O'Brien</h3>
+                    <p class="trainer-card-role">Youth Program Director</p>
+                    <p class="trainer-card-desc">35+ years in boxing. Developed over 200 amateur champions. Building the next generation of fighters.</p>
+                    <div class="trainer-card-socials">
+                        <a href="#" class="trainer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="trainer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div style="margin-top:40px;" class="fade-up">
             <a href="trainers.html" class="btn btn-secondary">Meet All Coaches <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
@@ -266,7 +453,88 @@
     </div>
 </section>
 
-<!-- ============ SECTION 9: PRICING PREVIEW ============ -->
+<!-- ============ SECTION 10: FIGHT NIGHT & LIVE EVENTS ============ -->
+<section class="section" id="events-showcase">
+    <div class="container text-center">
+        <span class="section-badge fade-up"><i class="fas fa-trophy"></i> Live Arena</span>
+        <h2 class="section-title fade-up">Sanctioned Events & <span style="color:var(--primary);">Fight Nights</span></h2>
+        <p class="section-subtitle fade-up">Experience the thunderous roar of the crowd. We host quarterly sanctioned exhibition bouts and amateur championships.</p>
+
+        <div class="fight-night-split fade-up">
+            <!-- Featured Event Card -->
+            <div class="fight-night-card">
+                <div class="fight-night-img-wrap">
+                    <img src="assets/images/home2-fight-night.jpg" alt="IronJaw Fall Fight Night arena championship" loading="lazy">
+                    <div class="fight-night-overlay"></div>
+                    <span class="fight-night-countdown-pill"><i class="fas fa-fire"></i> Next Event: Nov 14</span>
+                </div>
+                <div class="fight-night-card-body">
+                    <div class="fight-night-meta-date">
+                        <span><i class="fas fa-calendar-check"></i> Saturday, Nov 14, 2026</span>
+                        <span>•</span>
+                        <span><i class="fas fa-clock"></i> 7:00 PM EST</span>
+                    </div>
+                    <h3 class="fight-night-title">IronJaw Fall Brawl XVII: Championship Showcase</h3>
+                    <p class="fight-night-desc">Witness our top contenders throw down under the arena lights in 8 officially sanctioned USA Boxing bouts, featuring exhibition rounds from gym members and a WBC regional eliminator.</p>
+
+                    <div class="fight-night-bouts-strip">
+                        <div class="fight-night-bout-item">
+                            <strong>8 Bouts</strong>
+                            <span>Sanctioned Cards</span>
+                        </div>
+                        <div class="fight-night-bout-item">
+                            <strong>500+</strong>
+                            <span>Ringside Crowd</span>
+                        </div>
+                        <div class="fight-night-bout-item">
+                            <strong>Free Entry</strong>
+                            <span>Active Members</span>
+                        </div>
+                    </div>
+
+                    <div class="fight-night-actions">
+                        <a href="signup.html" class="btn btn-primary">RSVP Ringside Ticket <i class="fas fa-ticket"></i></a>
+                        <a href="contact.html" class="btn btn-secondary">Fighter Registration</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perks Column -->
+            <div class="fight-night-perks-column">
+                <div class="fight-perk-card">
+                    <div class="fight-perk-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="fight-perk-content">
+                        <h4>Electric Ring Atmosphere</h4>
+                        <p>Arena spot lighting, custom fighter walk-out music, official ring announcer, and professional judges for every bout.</p>
+                    </div>
+                </div>
+                <div class="fight-perk-card">
+                    <div class="fight-perk-icon"><i class="fas fa-medal"></i></div>
+                    <div class="fight-perk-content">
+                        <h4>Member Exhibition Pathway</h4>
+                        <p>Members who complete the Tier 3 Striker program can request an exhibition slot to showcase their progress before friends & family.</p>
+                    </div>
+                </div>
+                <div class="fight-perk-card">
+                    <div class="fight-perk-icon"><i class="fas fa-ticket-simple"></i></div>
+                    <div class="fight-perk-content">
+                        <h4>100% Free Member Passes</h4>
+                        <p>All active Fighter and Champion members receive complimentary ringside passes plus one free guest admission.</p>
+                    </div>
+                </div>
+                <div class="fight-perk-card">
+                    <div class="fight-perk-icon"><i class="fas fa-video"></i></div>
+                    <div class="fight-perk-content">
+                        <h4>Live Stream &amp; 4K Fight Replays</h4>
+                        <p>Broadcast live with multi-angle camera coverage and commentary. Competitors receive full 4K footage and custom highlight reels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 11: PRICING PREVIEW ============ -->
 <section class="section section-alt">
     <div class="container text-center">
         <span class="section-badge fade-up"><i class="fas fa-tags"></i> Membership</span>
@@ -327,19 +595,7 @@
     </div>
 </section>
 
-<!-- ============ SECTION 10: CTA ============ -->
-<section class="cta-section">
-    <div class="container">
-        <h2 class="fade-up">Your Transformation Starts Now</h2>
-        <p class="fade-up">Join IronJaw's premium training community. First class free, no commitment required.</p>
-        <div class="cta-actions fade-up">
-            <a href="signup.html" class="btn btn-primary btn-lg">Claim Free Trial</a>
-            <a href="contact.html" class="btn btn-secondary btn-lg">Schedule a Tour</a>
-        </div>
-    </div>
-</section>
-
-<!-- ============ SECTION 11: TESTIMONIALS ============ -->
+<!-- ============ SECTION 10: TESTIMONIALS ============ -->
 <section class="section">
     <div class="container text-center">
         <span class="section-badge fade-up"><i class="fas fa-medal"></i> Success Stories</span>
@@ -348,10 +604,10 @@
 
         <div class="testimonials-grid">
             <div class="testimonial-card fade-up">
-                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p class="testimonial-text">"I lost 45 pounds in 6 months at IronJaw. The combination of boxing training and the supportive community kept me accountable every single day."</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar">MK</div>
+                    <div class="testimonial-avatar"><img src="assets/images/testimonial-mike.jpg" alt="Mike Keane"></div>
                     <div>
                         <div class="testimonial-name">Mike Keane</div>
                         <div class="testimonial-role">Transformation Story</div>
@@ -359,10 +615,10 @@
                 </div>
             </div>
             <div class="testimonial-card fade-up delay-1">
-                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p class="testimonial-text">"From zero experience to Golden Gloves finalist in 18 months. Coach Marcus saw something in me I didn't even see in myself. IronJaw is the real deal."</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar">TC</div>
+                    <div class="testimonial-avatar"><img src="assets/images/testimonial-tyler.jpg" alt="Tyler Chen"></div>
                     <div>
                         <div class="testimonial-name">Tyler Chen</div>
                         <div class="testimonial-role">Competition Fighter</div>
@@ -370,15 +626,53 @@
                 </div>
             </div>
             <div class="testimonial-card fade-up delay-2">
-                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p class="testimonial-text">"As a busy executive, the 6AM sessions are perfect. The coaching is intense but efficient. Best investment I've made in my health and mental toughness."</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar">LS</div>
+                    <div class="testimonial-avatar"><img src="assets/images/testimonial-lauren.jpg" alt="Lauren Santos"></div>
                     <div>
                         <div class="testimonial-name">Lauren Santos</div>
                         <div class="testimonial-role">Fitness Member</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 11: CTA ============ -->
+<section class="cta-section cta-immersive-variant">
+    <div class="cta-immersive-bg">
+        <img src="assets/images/cta-transformation.jpg" alt="IronJaw Boxing Training Arena" loading="lazy">
+        <div class="cta-immersive-overlay"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2;">
+        <span class="section-badge fade-up" style="background:rgba(132,204,22,0.18);border:1px solid rgba(132,204,22,0.35);backdrop-filter:blur(8px);"><i class="fas fa-bolt"></i> Fast-Track Transformation</span>
+        <h2 class="fade-up">Your Transformation <span style="color:var(--primary);">Starts Now</span></h2>
+        <p class="fade-up">Join IronJaw's premium training community. First class free, zero risk, 100% results.</p>
+        <div class="cta-actions fade-up">
+            <a href="signup.html" class="btn btn-primary btn-lg">Claim Free Trial <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Schedule a Tour <i class="fas fa-calendar-check"></i></a>
+        </div>
+        <div class="cta-metrics-bar fade-up delay-1">
+            <div class="cta-metric-box">
+                <span class="cta-metric-num">30+</span>
+                <span class="cta-metric-label">Weekly Classes</span>
+            </div>
+            <div class="cta-metric-divider"></div>
+            <div class="cta-metric-box">
+                <span class="cta-metric-num">800+</span>
+                <span class="cta-metric-label">Avg. Calorie Burn</span>
+            </div>
+            <div class="cta-metric-divider"></div>
+            <div class="cta-metric-box">
+                <span class="cta-metric-num">2,500+</span>
+                <span class="cta-metric-label">Active Members</span>
+            </div>
+            <div class="cta-metric-divider"></div>
+            <div class="cta-metric-box">
+                <span class="cta-metric-num">100%</span>
+                <span class="cta-metric-label">Satisfaction Guarantee</span>
             </div>
         </div>
     </div>

@@ -19,9 +19,9 @@
 
 <!-- ============ SECTION 1: PAGE HERO ============ -->
 <section style="background:var(--secondary);padding:100px 0 60px;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;z-index:0;"><img src="assets/images/gym-interior.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.15);"></div>
+    <div style="position:absolute;inset:0;z-index:0;"><img src="assets/images/pricing-hero-bg.jpg" alt="IronJaw elite boxing gym arena" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.22);"></div>
     <div class="container" style="position:relative;z-index:2;">
-        <span class="section-badge" style="background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.3);backdrop-filter:blur(8px);"><i class="fas fa-tags"></i> Membership</span>
+        <span class="section-badge" style="background:rgba(132,204,22,0.18);border:1px solid rgba(132,204,22,0.35);backdrop-filter:blur(8px);"><i class="fas fa-tags"></i> Membership</span>
         <h1 class="section-title fade-up" style="color:#fff;font-size:3rem;">Membership <span style="color:var(--primary-light);">Plans</span></h1>
         <p class="section-subtitle fade-up" style="color:rgba(255,255,255,0.6);">Flexible plans designed for every budget and training goal. Start with a free trial.</p>
     </div>
@@ -101,7 +101,7 @@
         <p class="section-subtitle fade-up">See exactly what's included in each membership tier.</p>
 
         <div class="comparison-table-wrap overflow-x-auto fade-up">
-            <table class="comparison-table">
+            <table class="comparison-table pricing-comparison-table">
                 <thead>
                     <tr>
                         <th>Feature</th>
@@ -135,20 +135,35 @@
         <p class="section-subtitle fade-up">Enhance any plan with these optional add-on services.</p>
 
         <div class="bento-grid">
-            <div class="bento-card fade-up">
-                <div class="bento-card-icon"><i class="fas fa-bullseye"></i></div>
-                <h3>Extra PT Session — $65</h3>
-                <p>Add individual personal training sessions to any plan. Flexible scheduling with your preferred coach.</p>
+            <div class="bento-card addon-card fade-up">
+                <div class="addon-card-img">
+                    <img src="assets/images/addon-pt.jpg" alt="Extra Personal Training Session with Coach" loading="lazy">
+                </div>
+                <div class="addon-card-body">
+                    <div class="bento-card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Extra PT Session — $65</h3>
+                    <p>Add individual personal training sessions to any plan. Flexible scheduling with your preferred coach.</p>
+                </div>
             </div>
-            <div class="bento-card fade-up delay-1">
-                <div class="bento-card-icon"><i class="fas fa-apple-whole"></i></div>
-                <h3>Nutrition Coaching — $40/mo</h3>
-                <p>Custom meal plans, macro tracking guidance, and weekly check-ins with our sports nutritionist.</p>
+            <div class="bento-card addon-card fade-up delay-1">
+                <div class="addon-card-img">
+                    <img src="assets/images/addon-nutrition.jpg" alt="Sports Nutrition Coaching & Meal Prep" loading="lazy">
+                </div>
+                <div class="addon-card-body">
+                    <div class="bento-card-icon"><i class="fas fa-apple-whole"></i></div>
+                    <h3>Nutrition Coaching — $40/mo</h3>
+                    <p>Custom meal plans, macro tracking guidance, and weekly check-ins with our sports nutritionist.</p>
+                </div>
             </div>
-            <div class="bento-card fade-up delay-2">
-                <div class="bento-card-icon"><i class="fas fa-child"></i></div>
-                <h3>Youth Add-On — $35/mo</h3>
-                <p>Add youth class access for a family member. Includes access to both junior and teen programs.</p>
+            <div class="bento-card addon-card fade-up delay-2">
+                <div class="addon-card-img">
+                    <img src="assets/images/addon-youth.jpg" alt="Youth Boxing Program Training" loading="lazy">
+                </div>
+                <div class="addon-card-body">
+                    <div class="bento-card-icon"><i class="fas fa-child"></i></div>
+                    <h3>Youth Add-On — $35/mo</h3>
+                    <p>Add youth class access for a family member. Includes access to both junior and teen programs.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -212,13 +227,26 @@
 </section>
 
 <!-- ============ SECTION 7: CTA ============ -->
-<section class="cta-section">
+<section class="cta-section cta-split">
     <div class="container">
-        <h2 class="fade-up">Start Your Journey Today</h2>
-        <p class="fade-up">Join 2,500+ members who chose IronJaw. First class free, cancel anytime.</p>
-        <div class="cta-actions fade-up">
-            <a href="signup.html" class="btn btn-primary btn-lg">Claim Free Trial</a>
-            <a href="contact.html" class="btn btn-secondary btn-lg">Talk to Us</a>
+        <div class="cta-split-wrapper">
+            <div class="cta-content fade-up">
+                <span class="section-badge" style="background:rgba(132,204,22,0.18);border:1px solid rgba(132,204,22,0.35);backdrop-filter:blur(8px);margin-bottom:14px;"><i class="fas fa-bolt"></i> Risk-Free Trial</span>
+                <h2>Start Your Journey <span style="color:var(--primary);">Today</span></h2>
+                <p>Join 2,500+ athletes who chose IronJaw. Get unlimited access to championship-level coaching, high-energy rounds, and our cutting-edge training facility with complete peace of mind.</p>
+                <div class="cta-perk-bullets">
+                    <div class="cta-bullet-item"><i class="fas fa-check"></i> Free 60-minute introductory class with a pro coach</div>
+                    <div class="cta-bullet-item"><i class="fas fa-check"></i> Complimentary hand wraps and rental boxing gloves</div>
+                    <div class="cta-bullet-item"><i class="fas fa-check"></i> 100% month-to-month freedom — cancel anytime</div>
+                </div>
+                <div class="cta-actions">
+                    <a href="signup.html" class="btn btn-primary btn-lg">Claim Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg">Talk to Us <i class="fas fa-comment-dots"></i></a>
+                </div>
+            </div>
+            <div class="cta-media fade-up delay-1">
+                <img src="assets/images/cta-pricing.jpg" alt="Start Your Boxing Journey at IronJaw" loading="lazy">
+            </div>
         </div>
     </div>
 </section>

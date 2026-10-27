@@ -25,11 +25,15 @@
         <div class="dash-sidebar-header">
             <a href="index.html" class="nav-logo" aria-label="IronJaw Home">
                 <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C8102E"/><stop offset="100%" stop-color="#8B0000"/></linearGradient></defs>
-                    <rect width="100" height="100" rx="18" fill="url(#logoBg)"/>
-                    <path d="M32 30 Q32 20 40 20 L60 20 Q68 20 68 30 L68 55 Q68 72 50 78 Q32 72 32 55 Z" fill="none" stroke="white" stroke-width="5"/>
-                    <path d="M42 38 L42 52 M58 38 L58 52" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M40 62 Q50 70 60 62" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#84CC16"/><stop offset="100%" stop-color="#4D7C0F"/></linearGradient></defs>
+                    <rect width="100" height="100" rx="22" fill="url(#logoBg)"/>
+                    <rect x="36" y="73" width="28" height="12" rx="3.5" fill="#0D0D14"/>
+                    <rect x="39" y="76.5" width="22" height="5" rx="2" fill="#FFFFFF"/>
+                    <path d="M39 73 C36 66 32 60 31 54 C23 54 18 46 19 38 C20 31 26 27 33 30 C35 31 37 34 38 37 C40 28 46 20 56 19 C68 18 79 26 80 39 C81 50 74 61 65 67 L61 73 Z" fill="#0D0D14"/>
+                    <path d="M49 26 C60 25 71 29 73 40 C74 48 70 56 64 62" stroke="#84CC16" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    <path d="M37 36 C34 42 35 48 40 53" stroke="#84CC16" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <path d="M85 26 C89 31 91 38 90 45" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+                    <path d="M76 13 L82 9" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
                 </svg>
                 <div class="nav-logo-text">
                     <span class="brand-top">Boxing & Training</span>
@@ -71,7 +75,7 @@
                     <i class="fas fa-moon"></i>
                 </button>
                 <div style="position:relative;">
-                    <button class="dash-notif-btn" id="notifBtn" aria-label="Notifications">
+                    <button class="nav-icon-btn dash-notif-btn" id="notifBtn" aria-label="Notifications" title="Notifications">
                         <i class="fas fa-bell"></i>
                         <span class="dash-notif-dot"></span>
                     </button>
@@ -115,14 +119,14 @@
             <!-- ============ TAB: OVERVIEW ============ -->
             <div class="dash-tab-panel active" id="tab-overview">
                 <div class="dash-welcome">
-                    <h2>Welcome back, Jake! 🥊</h2>
+                    <h2>Welcome back, Jake! <i class="fas fa-hand-fist" style="color:var(--primary);margin-left:0.35rem;font-size:1.25rem;"></i></h2>
                     <p>You have 2 classes booked this week. Keep up the great work — you're on a 12-session streak!</p>
                 </div>
 
                 <div class="dash-metrics">
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon red"><i class="fas fa-fire"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-fire"></i></div>
                             <span class="dash-metric-label">Classes This Month</span>
                         </div>
                         <div class="dash-metric-value">14</div>
@@ -130,7 +134,7 @@
                     </div>
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon blue"><i class="fas fa-dumbbell"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-dumbbell"></i></div>
                             <span class="dash-metric-label">Training Hours</span>
                         </div>
                         <div class="dash-metric-value">18.5</div>
@@ -138,7 +142,7 @@
                     </div>
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon green"><i class="fas fa-bolt"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-bolt"></i></div>
                             <span class="dash-metric-label">Calories Burned</span>
                         </div>
                         <div class="dash-metric-value">8,420</div>
@@ -146,7 +150,7 @@
                     </div>
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon amber"><i class="fas fa-trophy"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-trophy"></i></div>
                             <span class="dash-metric-label">Current Streak</span>
                         </div>
                         <div class="dash-metric-value">12</div>
@@ -185,18 +189,103 @@
                         </table>
                     </div>
                 </div>
+
+                <!-- Overview Row 2: Weekly Targets & Daily Fight Drill -->
+                <div class="dash-grid-2">
+                    <!-- Weekly Goal Progress Hub -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <h3><i class="fas fa-bullseye" style="color:var(--primary);margin-right:8px;"></i> Weekly Training Targets</h3>
+                        
+                        <div class="dash-target-item">
+                            <div class="dash-target-meta">
+                                <span><i class="fas fa-hand-fist"></i> Classes Attended</span>
+                                <span>3 of 4 Sessions (75%)</span>
+                            </div>
+                            <div class="dash-target-bar">
+                                <div class="dash-target-fill" style="width:75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="dash-target-item">
+                            <div class="dash-target-meta">
+                                <span><i class="fas fa-fire"></i> Calorie Burn Goal</span>
+                                <span>2,400 of 3,000 kcal (80%)</span>
+                            </div>
+                            <div class="dash-target-bar">
+                                <div class="dash-target-fill" style="width:80%;"></div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:14px;border-top:1px solid var(--border-light);font-size:0.8rem;color:var(--text-muted);">
+                            <span><i class="fas fa-medal" style="color:var(--primary);"></i> Streak Master: 12 Active Days</span>
+                            <span style="font-weight:600;color:var(--text);">Resets Sunday 11:59 PM</span>
+                        </div>
+
+                        <!-- Active Streak Booster & Incentive -->
+                        <div style="margin-top:16px;padding:12px 14px;background:rgba(132,204,22,0.06);border:1px solid rgba(132,204,22,0.22);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:space-between;">
+                            <div style="display:flex;align-items:center;gap:10px;">
+                                <i class="fas fa-fire-flame-curved" style="color:var(--primary);font-size:1.15rem;"></i>
+                                <div>
+                                    <div style="font-size:0.82rem;font-weight:600;">Streak Bonus Multiplier Active</div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted);">1.5x XP earned on all weekend sparring and fight drills</div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" onclick="alert('Streak details: 12 consecutive active training days logged. Keep fighting!')" style="font-size:0.75rem;padding:4px 10px;">View</button>
+                        </div>
+                    </div>
+
+                    <!-- Coach Marcus's Fight Drill -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <h3><i class="fas fa-clipboard-list" style="color:var(--primary);margin-right:8px;"></i> Coach's Daily Fight Drill</h3>
+                        <div class="dash-drill-box">
+                            <div class="dash-drill-head">
+                                <div class="dash-drill-avatar">MJ</div>
+                                <div class="dash-drill-author">
+                                    <h4>Coach Marcus Johnson</h4>
+                                    <span>Head Boxing Coach · Daily Focus</span>
+                                </div>
+                                <span class="dash-status active" style="margin-left:auto;">Today's Drill</span>
+                            </div>
+                            <div class="dash-drill-steps">
+                                <div class="dash-drill-step-item">
+                                    <i class="fas fa-check"></i>
+                                    <span><strong>Round 1–3:</strong> Double Jab &rarr; Rear Cross &rarr; Slip Left &rarr; Left Hook to Ribs (Heavy Bag).</span>
+                                </div>
+                                <div class="dash-drill-step-item">
+                                    <i class="fas fa-check"></i>
+                                    <span><strong>Round 4:</strong> 1-Minute high-pace straight punches + high knees burnout finish.</span>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                                <button type="button" class="btn btn-primary btn-sm" onclick="alert('Great job! Drill marked complete. +180 XP added to your workout log.')"><i class="fas fa-circle-check"></i> Mark Complete</button>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="alert('Coach breakdown: Keep lead hand pinned to chin during the pivot.')"><i class="fas fa-circle-info"></i> Coach Tips</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- ============ TAB: BOOK CLASSES ============ -->
             <div class="dash-tab-panel" id="tab-bookings">
-                <div class="dash-welcome" style="margin-bottom:24px;">
-                    <h2>Book Your Classes 📅</h2>
+                <div class="dash-welcome" style="margin-bottom:20px;">
+                    <h2>Book Your Classes <i class="fas fa-calendar-check" style="color:var(--primary);margin-left:0.35rem;font-size:1.25rem;"></i></h2>
                     <p>Select a class below to reserve your spot. Fighter plan members get unlimited bookings.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="dash-filter-pills" id="classFilterPills">
+                    <button type="button" class="dash-filter-pill active" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-layer-group"></i> All Sessions (7)</button>
+                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-shield-halved"></i> Fundamentals</button>
+                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-fire"></i> Cardio Blast</button>
+                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-hand-fist"></i> Mitt Work</button>
+                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-dumbbell"></i> S&C Training</button>
+                    <button type="button" class="dash-filter-pill" onclick="this.parentElement.querySelectorAll('.dash-filter-pill').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-trophy"></i> Sparring</button>
                 </div>
 
                 <div class="dash-table-wrap">
                     <div class="dash-table-header">
                         <h3>Available Classes This Week</h3>
+                        <span class="dash-status active">Live Schedule</span>
                     </div>
                     <table class="dash-table">
                         <thead><tr><th>Class</th><th>Day</th><th>Time</th><th>Coach</th><th>Spots</th><th>Action</th></tr></thead>
@@ -215,6 +304,7 @@
                 <div class="dash-table-wrap" style="margin-top:24px;">
                     <div class="dash-table-header">
                         <h3>Personal Training Sessions</h3>
+                        <span style="font-size:0.8rem;color:var(--text-muted);">1-on-1 Ring Coaching</span>
                     </div>
                     <table class="dash-table">
                         <thead><tr><th>Coach</th><th>Available Slots</th><th>Duration</th><th>Price</th><th>Action</th></tr></thead>
@@ -225,40 +315,101 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- Bookings Row 2: Active Reservations & Bag Station Booker -->
+                <div class="dash-grid-2" style="margin-top:24px;margin-bottom:0;">
+                    <!-- Active Reservations Card -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <h3><i class="fas fa-calendar-check" style="color:var(--primary);margin-right:8px;"></i> My Reserved Class Spots</h3>
+                        
+                        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px;">
+                            <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);padding:14px;display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <div style="font-weight:600;font-size:0.95rem;">Boxing Fundamentals</div>
+                                    <div style="font-size:0.8rem;color:var(--text-muted);"><i class="fas fa-clock"></i> Mon, Oct 28 · 6:00 AM · Coach Marcus</div>
+                                    <span class="dash-status active" style="margin-top:6px;">Confirmed · Spot #8</span>
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="alert('Class reservation cancelled.')">Cancel</button>
+                            </div>
+
+                            <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);padding:14px;display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <div style="font-weight:600;font-size:0.95rem;">Mitt Work & Combos</div>
+                                    <div style="font-size:0.8rem;color:var(--text-muted);"><i class="fas fa-clock"></i> Wed, Oct 30 · 12:00 PM · Coach Diego</div>
+                                    <span class="dash-status active" style="margin-top:6px;">Confirmed · Spot #5</span>
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="alert('Class reservation cancelled.')">Cancel</button>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary btn-sm w-full" onclick="alert('Exporting .ics calendar file for Google/Apple Calendar...')"><i class="fas fa-calendar-plus"></i> Add All Bookings to Calendar</button>
+                    </div>
+
+                    <!-- Heavy Bag Station Reservation -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <h3><i class="fas fa-crosshairs" style="color:var(--primary);margin-right:8px;"></i> Reserve Bag / Ring Station</h3>
+                        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">Reserve a 45-minute private workout station during open gym hours.</p>
+
+                        <form onsubmit="event.preventDefault(); alert('Station successfully reserved! Locker turnstile pass updated.');">
+                            <div class="form-group" style="margin-bottom:14px;">
+                                <label class="form-label" for="reserveStationSelect">Select Equipment Station</label>
+                                <select class="form-input form-select" id="reserveStationSelect">
+                                    <option>Heavy Bag #4 (Water-Filled Teardrop Bag)</option>
+                                    <option>Heavy Bag #7 (150lb Leather Power Bag)</option>
+                                    <option>Speed Bag Platform #2</option>
+                                    <option>Double-End Reflex Bag #1</option>
+                                    <option>Olympic Boxing Ring Canvas B (Controlled Sparring)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom:18px;">
+                                <label class="form-label" for="reserveTimeSelect">Available 45-Min Slot</label>
+                                <select class="form-input form-select" id="reserveTimeSelect">
+                                    <option>Today · 2:00 PM – 2:45 PM (Open)</option>
+                                    <option>Today · 4:00 PM – 4:45 PM (Open)</option>
+                                    <option>Tomorrow · 9:00 AM – 9:45 AM (Open)</option>
+                                    <option>Tomorrow · 3:30 PM – 4:15 PM (Open)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-sm w-full"><i class="fas fa-bookmark"></i> Confirm Station Reservation</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
             <!-- ============ TAB: WORKOUT LOG ============ -->
             <div class="dash-tab-panel" id="tab-progress">
                 <div class="dash-welcome" style="margin-bottom:24px;">
-                    <h2>Workout Progress 💪</h2>
+                    <h2>Workout Progress <i class="fas fa-chart-line" style="color:var(--primary);margin-left:0.35rem;font-size:1.25rem;"></i></h2>
                     <p>Track your training history, monitor improvement, and hit your fitness goals.</p>
                 </div>
 
                 <div class="dash-metrics">
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon red"><i class="fas fa-calendar-check"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-calendar-check"></i></div>
                             <span class="dash-metric-label">Total Sessions</span>
                         </div>
                         <div class="dash-metric-value">156</div>
                     </div>
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon blue"><i class="fas fa-clock"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-clock"></i></div>
                             <span class="dash-metric-label">Total Hours</span>
                         </div>
                         <div class="dash-metric-value">198</div>
                     </div>
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon green"><i class="fas fa-fire-flame-curved"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-fire-flame-curved"></i></div>
                             <span class="dash-metric-label">Total Calories</span>
                         </div>
                         <div class="dash-metric-value">92,400</div>
                     </div>
                     <div class="dash-metric">
                         <div class="dash-metric-header">
-                            <div class="dash-metric-icon amber"><i class="fas fa-star"></i></div>
+                            <div class="dash-metric-icon"><i class="fas fa-star"></i></div>
                             <span class="dash-metric-label">Skill Level</span>
                         </div>
                         <div class="dash-metric-value" style="font-size:1.4rem;">Intermediate</div>
@@ -268,6 +419,7 @@
                 <div class="dash-table-wrap">
                     <div class="dash-table-header">
                         <h3>Workout History</h3>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="alert('Exporting full workout history CSV file...')"><i class="fas fa-download"></i> Export CSV</button>
                     </div>
                     <table class="dash-table">
                         <thead><tr><th>Date</th><th>Class</th><th>Coach</th><th>Duration</th><th>Calories</th><th>Notes</th></tr></thead>
@@ -282,19 +434,123 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- Personal Records & Athletic Benchmarks -->
+                <div style="margin-top:28px;">
+                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+                        <i class="fas fa-award" style="color:var(--primary);"></i> Fighter Benchmarks & Personal Records (PRs)
+                    </h3>
+                    <div class="dash-benchmarks-grid">
+                        <div class="dash-benchmark-card">
+                            <div class="dash-benchmark-header">
+                                <span class="dash-benchmark-title">Punch Velocity</span>
+                                <i class="fas fa-gauge-high" style="color:var(--primary);"></i>
+                            </div>
+                            <div class="dash-benchmark-val">24.8 <span style="font-size:0.9rem;font-weight:500;color:var(--text-muted);">mph</span></div>
+                            <div class="dash-benchmark-sub"><i class="fas fa-arrow-up" style="color:var(--success);"></i> Top 10% in Welterweight</div>
+                        </div>
+
+                        <div class="dash-benchmark-card">
+                            <div class="dash-benchmark-header">
+                                <span class="dash-benchmark-title">3-Min Heavy Bag Strikes</span>
+                                <i class="fas fa-hand-fist" style="color:var(--primary);"></i>
+                            </div>
+                            <div class="dash-benchmark-val">412 <span style="font-size:0.9rem;font-weight:500;color:var(--text-muted);">punches</span></div>
+                            <div class="dash-benchmark-sub"><i class="fas fa-bolt" style="color:var(--primary);"></i> PR Set Oct 21 (+34 hits)</div>
+                        </div>
+
+                        <div class="dash-benchmark-card">
+                            <div class="dash-benchmark-header">
+                                <span class="dash-benchmark-title">5km Roadwork Run</span>
+                                <i class="fas fa-stopwatch" style="color:var(--primary);"></i>
+                            </div>
+                            <div class="dash-benchmark-val">21:45 <span style="font-size:0.9rem;font-weight:500;color:var(--text-muted);">min</span></div>
+                            <div class="dash-benchmark-sub"><i class="fas fa-heart-pulse" style="color:var(--primary);"></i> Aerobic Base Tier 1</div>
+                        </div>
+
+                        <div class="dash-benchmark-card">
+                            <div class="dash-benchmark-header">
+                                <span class="dash-benchmark-title">Max Push-Ups (2 Min)</span>
+                                <i class="fas fa-dumbbell" style="color:var(--primary);"></i>
+                            </div>
+                            <div class="dash-benchmark-val">68 <span style="font-size:0.9rem;font-weight:500;color:var(--text-muted);">reps</span></div>
+                            <div class="dash-benchmark-sub"><i class="fas fa-circle-check" style="color:var(--success);"></i> Target Achieved</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Scorecard & Sparring Readiness -->
+                <div class="dash-grid-2" style="margin-top:24px;margin-bottom:0;">
+                    <!-- Technical Scorecard -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                            <h3 style="margin-bottom:0;"><i class="fas fa-clipboard-check" style="color:var(--primary);margin-right:8px;"></i> Technical Skills Assessment</h3>
+                            <span class="dash-status active">Grade: 8.6 / 10</span>
+                        </div>
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:16px;">Evaluated monthly by Coach Marcus Johnson during mitt work and technical sparring.</p>
+
+                        <div class="dash-target-item">
+                            <div class="dash-target-meta">
+                                <span>Jab & Straight Mechanics</span>
+                                <span>9.0 / 10</span>
+                            </div>
+                            <div class="dash-target-bar">
+                                <div class="dash-target-fill" style="width:90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="dash-target-item">
+                            <div class="dash-target-meta">
+                                <span>Footwork & Ring Pivots</span>
+                                <span>8.5 / 10</span>
+                            </div>
+                            <div class="dash-target-bar">
+                                <div class="dash-target-fill" style="width:85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="dash-target-item">
+                            <div class="dash-target-meta">
+                                <span>Slip & Roll Defense</span>
+                                <span>8.2 / 10</span>
+                            </div>
+                            <div class="dash-target-bar">
+                                <div class="dash-target-fill" style="width:82%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sparring Readiness & Fight Camp Status -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <h3 style="margin-bottom:14px;"><i class="fas fa-shield-halved" style="color:var(--primary);margin-right:8px;"></i> Sparring Readiness Status</h3>
+                        
+                        <div style="background:rgba(132,204,22,0.08);border:1px solid rgba(132,204,22,0.25);border-radius:var(--radius-md);padding:16px;margin-bottom:16px;">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                                <div style="font-weight:700;font-size:1.05rem;color:var(--primary);">Level 2 Approved Boxer</div>
+                                <span class="dash-status active">Active</span>
+                            </div>
+                            <div style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;">Cleared for 4-round supervised sparring. Mandatory 16oz lace-up gloves and USA Boxing certified headgear.</div>
+                        </div>
+
+                        <div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:6px;"><strong>Next Sparring Assessment:</strong> Friday, Nov 1 · 5:00 PM</div>
+                        <div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:18px;"><strong>Lead Coach:</strong> Marcus Johnson</div>
+
+                        <button type="button" class="btn btn-primary btn-sm w-full" onclick="alert('Manual workout log modal opened. Enter round details and punch counts.')"><i class="fas fa-plus"></i> Log Open Gym / Solo Session</button>
+                    </div>
+                </div>
             </div>
 
             <!-- ============ TAB: MEMBERSHIP ============ -->
             <div class="dash-tab-panel" id="tab-membership">
                 <div class="dash-welcome" style="margin-bottom:24px;">
-                    <h2>Membership Status 🎯</h2>
+                    <h2>Membership Status <i class="fas fa-id-card" style="color:var(--primary);margin-left:0.35rem;font-size:1.25rem;"></i></h2>
                     <p>Manage your plan, view benefits, and track your membership details.</p>
                 </div>
 
                 <div class="dash-grid-2">
-                    <div class="dash-settings-card">
+                    <div class="dash-settings-card" style="margin-bottom:0;">
                         <h3>Current Plan</h3>
-                        <div style="display:flex;justify-content:space-between;align-items:center;padding:16px;background:rgba(200,16,46,0.06);border-radius:var(--radius-md);margin-bottom:16px;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;padding:16px;background:rgba(132,204,22,0.08);border:1px solid rgba(132,204,22,0.2);border-radius:var(--radius-md);margin-bottom:16px;">
                             <div>
                                 <div style="font-size:1.3rem;font-weight:600;color:var(--primary);">Fighter Plan</div>
                                 <div style="font-size:0.9rem;color:var(--text-muted);font-weight:450;">$89/month — Billed monthly</div>
@@ -304,23 +560,104 @@
                         <div style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:8px;font-weight:450;"><strong>Member since:</strong> March 15, 2023</div>
                         <div style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:8px;font-weight:450;"><strong>Next billing:</strong> November 15, 2024</div>
                         <div style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:16px;font-weight:450;"><strong>Member ID:</strong> IJ-2023-04521</div>
-                        <div style="display:flex;gap:12px;">
+                        <div style="display:flex;gap:12px;margin-bottom:16px;">
                             <button class="btn btn-primary btn-sm" onclick="alert('Upgrade to Champion plan coming soon!')">Upgrade Plan</button>
                             <button class="btn btn-secondary btn-sm" onclick="alert('Freeze request submitted.')">Freeze Membership</button>
                         </div>
+
+                        <!-- Fighter Tier Visual Showcase Banner -->
+                        <div class="dash-plan-banner" style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border);">
+                            <img src="assets/images/fighter-plan-banner.jpg" alt="IronJaw Fighter Plan Member Training" style="width:100%;height:150px;object-fit:cover;display:block;">
+                            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(13,13,20,0.05) 0%, rgba(13,13,20,0.82) 100%);display:flex;align-items:flex-end;padding:12px 14px;">
+                                <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+                                    <span style="font-size:0.75rem;font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.9);"><i class="fas fa-hand-fist" style="color:var(--primary);margin-right:6px;"></i> Fighter Tier: Unlimited Sparring & Gym</span>
+                                    <span style="font-size:0.7rem;color:var(--primary-light);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;background:rgba(0,0,0,0.45);padding:2px 8px;border-radius:var(--radius-full);border:1px solid rgba(132,204,22,0.3);">Active</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="dash-settings-card">
+                    <div class="dash-settings-card" style="margin-bottom:0;">
                         <h3>Plan Benefits</h3>
                         <div style="display:flex;flex-direction:column;gap:10px;">
-                            <div class="pricing-feature"><i class="fas fa-check" style="color:var(--success);"></i> Unlimited group classes</div>
-                            <div class="pricing-feature"><i class="fas fa-check" style="color:var(--success);"></i> Supervised sparring sessions</div>
-                            <div class="pricing-feature"><i class="fas fa-check" style="color:var(--success);"></i> Open gym access (6AM–10PM)</div>
-                            <div class="pricing-feature"><i class="fas fa-check" style="color:var(--success);"></i> Progress tracking dashboard</div>
-                            <div class="pricing-feature"><i class="fas fa-check" style="color:var(--success);"></i> Free gloves rental</div>
-                            <div class="pricing-feature"><i class="fas fa-check" style="color:var(--success);"></i> Locker room & showers</div>
-                            <div class="pricing-feature disabled"><i class="fas fa-minus" style="color:var(--text-muted);"></i> Personal training (upgrade needed)</div>
-                            <div class="pricing-feature disabled"><i class="fas fa-minus" style="color:var(--text-muted);"></i> Nutrition plan (upgrade needed)</div>
+                            <div class="pricing-feature"><i class="fas fa-check"></i> Unlimited group classes</div>
+                            <div class="pricing-feature"><i class="fas fa-check"></i> Supervised sparring sessions</div>
+                            <div class="pricing-feature"><i class="fas fa-check"></i> Open gym access (6AM–10PM)</div>
+                            <div class="pricing-feature"><i class="fas fa-check"></i> Progress tracking dashboard</div>
+                            <div class="pricing-feature"><i class="fas fa-check"></i> Free gloves rental</div>
+                            <div class="pricing-feature"><i class="fas fa-check"></i> Locker room & showers</div>
+                            <div class="pricing-feature disabled"><i class="fas fa-minus"></i> Personal training (upgrade needed)</div>
+                            <div class="pricing-feature disabled"><i class="fas fa-minus"></i> Nutrition plan (upgrade needed)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Membership Row 2: Digital Arena Pass & Facility Allocations -->
+                <div class="dash-grid-2" style="margin-top:24px;margin-bottom:0;">
+                    <!-- Digital Pass Card -->
+                    <div>
+                        <div class="dash-member-pass">
+                            <div class="dash-member-pass-top">
+                                <div>
+                                    <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--primary);font-weight:700;margin-bottom:4px;">IRONJAW FIGHT ARENA</div>
+                                    <div style="font-size:1.15rem;font-weight:700;">Digital Member Pass</div>
+                                </div>
+                                <div class="dash-pass-chip"></div>
+                            </div>
+
+                            <div class="dash-pass-id">IJ • 2023 • 04521</div>
+
+                            <div class="dash-pass-footer">
+                                <div>
+                                    <div class="dash-pass-holder">Member Name / Tier</div>
+                                    <div class="dash-pass-name">Jake Davis · Fighter Plan</div>
+                                </div>
+                                <div class="dash-pass-qr" title="Scan at Gym Turnstiles">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:10px;margin-top:12px;">
+                            <button type="button" class="btn btn-secondary btn-sm" style="flex:1;" onclick="alert('Digital pass saved to Apple Wallet!')"><i class="fab fa-apple"></i> Apple Wallet</button>
+                            <button type="button" class="btn btn-secondary btn-sm" style="flex:1;" onclick="alert('Digital pass saved to Google Wallet!')"><i class="fab fa-google"></i> Google Wallet</button>
+                        </div>
+                    </div>
+
+                    <!-- Facility Perks & Allocations Card -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                            <h3 style="margin-bottom:0;"><i class="fas fa-boxes-stacked" style="color:var(--primary);margin-right:8px;"></i> Facility Allocations & Perks</h3>
+                            <span class="dash-status active">2 Perks Active</span>
+                        </div>
+
+                        <div class="dash-perks-list">
+                            <div class="dash-perk-item">
+                                <i class="fas fa-tag"></i>
+                                <div>
+                                    <strong>15% Pro Shop Discount</strong>
+                                    <span>Code: FIGHTER15 at checkout</span>
+                                </div>
+                            </div>
+
+                            <div class="dash-perk-item">
+                                <i class="fas fa-soap"></i>
+                                <div>
+                                    <strong>Towel & Glove Wash</strong>
+                                    <span>Free sanitization locker access</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Arena Access & Member Allocation Callout -->
+                        <div style="margin-top:16px;padding:12px 14px;background:rgba(132,204,22,0.06);border:1px solid rgba(132,204,22,0.2);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:space-between;">
+                            <div style="display:flex;align-items:center;gap:10px;">
+                                <i class="fas fa-ring" style="color:var(--primary);font-size:1.15rem;"></i>
+                                <div>
+                                    <div style="font-size:0.85rem;font-weight:600;">Main Boxing Ring Allocation</div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted);">Open sparring lanes included daily 6:00 AM – 10:00 PM</div>
+                                </div>
+                            </div>
+                            <span class="dash-status active" style="font-size:0.7rem;">Included</span>
                         </div>
                     </div>
                 </div>
@@ -329,7 +666,7 @@
             <!-- ============ TAB: PAYMENTS ============ -->
             <div class="dash-tab-panel" id="tab-payments">
                 <div class="dash-welcome" style="margin-bottom:24px;">
-                    <h2>Payment History 💳</h2>
+                    <h2>Payment History <i class="fas fa-credit-card" style="color:var(--primary);margin-left:0.35rem;font-size:1.25rem;"></i></h2>
                     <p>View your billing history and manage payment methods.</p>
                 </div>
 
@@ -350,24 +687,70 @@
                     </table>
                 </div>
 
-                <div class="dash-settings-card" style="margin-top:24px;">
-                    <h3>Payment Method</h3>
-                    <div style="display:flex;align-items:center;gap:16px;padding:16px;background:var(--bg-alt);border-radius:var(--radius-md);margin-bottom:16px;">
-                        <i class="fas fa-credit-card" style="font-size:1.5rem;color:var(--primary);"></i>
-                        <div>
-                            <div style="font-weight:600;">Visa ending in 4242</div>
-                            <div style="font-size:0.85rem;color:var(--text-muted);font-weight:450;">Expires 12/2026</div>
+                <!-- Payments Row 2: Payment Methods & Upcoming Invoicing Hub -->
+                <div class="dash-grid-2" style="margin-top:24px;margin-bottom:0;">
+                    <!-- Payment Methods Card -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                            <h3 style="margin-bottom:0;"><i class="fas fa-credit-card" style="color:var(--primary);margin-right:8px;"></i> Payment Methods</h3>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Add Card modal opened.')"><i class="fas fa-plus"></i> Add Card</button>
                         </div>
-                        <span class="dash-status active" style="margin-left:auto;">Default</span>
+
+                        <!-- Default Card -->
+                        <div style="display:flex;align-items:center;gap:14px;padding:14px;background:var(--bg-alt);border:1px solid rgba(132,204,22,0.3);border-radius:var(--radius-md);margin-bottom:12px;">
+                            <div style="width:40px;height:40px;border-radius:var(--radius-sm);background:rgba(132,204,22,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.2rem;flex-shrink:0;">
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600;font-size:0.95rem;">Visa ending in 4242</div>
+                                <div style="font-size:0.8rem;color:var(--text-muted);">Expires 12/2026 · Auto-Pay Card</div>
+                            </div>
+                            <span class="dash-status active">Default</span>
+                        </div>
+
+                        <!-- Backup Card -->
+                        <div style="display:flex;align-items:center;gap:14px;padding:14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:16px;">
+                            <div style="width:40px;height:40px;border-radius:var(--radius-sm);background:var(--bg-card);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:1.2rem;flex-shrink:0;">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600;font-size:0.95rem;">Mastercard ending in 8801</div>
+                                <div style="font-size:0.8rem;color:var(--text-muted);">Expires 08/2027 · Backup Card</div>
+                            </div>
+                            <button type="button" class="btn btn-secondary btn-sm" onclick="alert('Card set as default.')">Make Default</button>
+                        </div>
+
+                        <div style="font-size:0.78rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+                            <i class="fas fa-shield-halved" style="color:var(--primary);"></i>
+                            <span>All transactions encrypted with PCI-DSS 256-bit bank-grade security.</span>
+                        </div>
                     </div>
-                    <button class="btn btn-secondary btn-sm" onclick="alert('Update payment method feature coming soon.')">Update Payment Method</button>
+
+                    <!-- Upcoming Billing & Invoicing Summary -->
+                    <div class="dash-settings-card" style="margin-bottom:0;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                            <h3 style="margin-bottom:0;"><i class="fas fa-file-invoice-dollar" style="color:var(--primary);margin-right:8px;"></i> Next Scheduled Charge</h3>
+                            <span class="dash-status active">Auto-Pay Active</span>
+                        </div>
+
+                        <div style="background:rgba(132,204,22,0.08);border:1px solid rgba(132,204,22,0.25);border-radius:var(--radius-md);padding:16px;margin-bottom:16px;">
+                            <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:2px;">Scheduled for November 15, 2024</div>
+                            <div style="font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:4px;">$89.00 <span style="font-size:0.9rem;font-weight:450;color:var(--text-muted);">USD</span></div>
+                            <div style="font-size:0.825rem;color:var(--primary);font-weight:500;"><i class="fas fa-circle-check"></i> Fighter Plan Monthly Membership</div>
+                        </div>
+
+                        <div style="display:flex;gap:10px;">
+                            <button type="button" class="btn btn-secondary btn-sm" style="flex:1;" onclick="alert('Downloading October 2024 invoice receipt PDF...')"><i class="fas fa-download"></i> Download Last PDF</button>
+                            <button type="button" class="btn btn-secondary btn-sm" style="flex:1;" onclick="alert('Switch to annual plan ($899/yr) and save $169 annually.')"><i class="fas fa-repeat"></i> Switch to Annual</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- ============ TAB: SETTINGS ============ -->
             <div class="dash-tab-panel" id="tab-settings">
                 <div class="dash-welcome" style="margin-bottom:24px;">
-                    <h2>Account Settings ⚙️</h2>
+                    <h2>Account Settings <i class="fas fa-gear" style="color:var(--primary);margin-left:0.35rem;font-size:1.25rem;"></i></h2>
                     <p>Update your profile information and account preferences.</p>
                 </div>
 
@@ -394,33 +777,94 @@
                                 <input type="tel" class="form-input" id="setPhone" value="+1 (555) 123-4567">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="setDob">Date of Birth</label>
-                            <input type="date" class="form-input" id="setDob" value="1995-07-20" style="max-width:300px;">
+                        <div class="dash-form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="setDob">Date of Birth</label>
+                                <input type="date" class="form-input" id="setDob" value="1995-07-20">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="setEmergency">Emergency Contact</label>
+                                <input type="tel" class="form-input" id="setEmergency" value="+1 (555) 987-6543 (Sarah Davis)">
+                            </div>
+                        </div>
+                        <div class="dash-form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="setStance">Boxing Stance</label>
+                                <select class="form-input form-select" id="setStance">
+                                    <option value="orthodox" selected>Orthodox (Right-handed)</option>
+                                    <option value="southpaw">Southpaw (Left-handed)</option>
+                                    <option value="switch">Switch Hitter</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="setWeight">Weight Class & Division</label>
+                                <select class="form-input form-select" id="setWeight">
+                                    <option>Welterweight (147 lbs)</option>
+                                    <option selected>Middleweight (160 lbs)</option>
+                                    <option>Super Middleweight (168 lbs)</option>
+                                    <option>Light Heavyweight (175 lbs)</option>
+                                    <option>Heavyweight (200+ lbs)</option>
+                                </select>
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Save Changes</button>
                     </form>
                 </div>
 
                 <div class="dash-settings-card">
-                    <h3>Change Password</h3>
-                    <form onsubmit="event.preventDefault(); alert('Password updated!');">
-                        <div class="form-group">
-                            <label class="form-label" for="setCurrPw">Current Password</label>
-                            <div class="password-wrap">
-                                <input type="password" class="form-input" id="setCurrPw" placeholder="Enter current password" style="max-width:400px;">
-                                <button type="button" class="password-toggle" onclick="togglePasswordVisibility('setCurrPw', this)"><i class="fas fa-eye"></i></button>
+                    <h3>Security & Password</h3>
+                    <div class="dash-grid-2" style="margin-bottom:0;align-items:start;">
+                        <!-- Left: Password Form -->
+                        <form onsubmit="event.preventDefault(); alert('Password updated successfully!'); this.reset();">
+                            <div class="form-group">
+                                <label class="form-label" for="setCurrPw">Current Password</label>
+                                <div class="password-wrapper">
+                                    <input type="password" class="form-input" id="setCurrPw" placeholder="Enter current password" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('setCurrPw', this)" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="setNewPw">New Password</label>
+                                <div class="password-wrapper">
+                                    <input type="password" class="form-input" id="setNewPw" placeholder="Enter new password" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('setNewPw', this)" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="setConfirmPw">Confirm New Password</label>
+                                <div class="password-wrapper">
+                                    <input type="password" class="form-input" id="setConfirmPw" placeholder="Confirm new password" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('setConfirmPw', this)" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </form>
+
+                        <!-- Right: Security & 2FA Hub -->
+                        <div class="dash-security-box">
+                            <div>
+                                <h4><i class="fas fa-shield-halved"></i> Password Requirements</h4>
+                                <div class="dash-sec-reqs">
+                                    <div class="dash-sec-req-item"><i class="fas fa-circle-check"></i> Minimum 8 characters in length</div>
+                                    <div class="dash-sec-req-item"><i class="fas fa-circle-check"></i> At least 1 number or special character</div>
+                                    <div class="dash-sec-req-item"><i class="fas fa-circle-check"></i> Cannot match previous 3 passwords</div>
+                                </div>
+                            </div>
+
+                            <div class="dash-2fa-status">
+                                <div class="dash-2fa-info">
+                                    <strong><i class="fas fa-lock" style="color:var(--primary);"></i> 2-Factor Authentication</strong>
+                                    <span>Active · SMS code sent to +1 (555) ***-4567</span>
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="alert('2FA Settings: Phone +1 (555) ***-4567 is verified.')">Manage</button>
+                            </div>
+
+                            <div class="dash-session-preview">
+                                <i class="fas fa-desktop"></i>
+                                <span>Active Session: Windows · Chrome (New York, US)</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="setNewPw">New Password</label>
-                            <div class="password-wrap">
-                                <input type="password" class="form-input" id="setNewPw" placeholder="Enter new password" style="max-width:400px;">
-                                <button type="button" class="password-toggle" onclick="togglePasswordVisibility('setNewPw', this)"><i class="fas fa-eye"></i></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Update Password</button>
-                    </form>
+                    </div>
                 </div>
 
                 <div class="dash-settings-card" style="border-color:var(--danger);">
@@ -452,6 +896,31 @@
 <script src="components.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    // Disable automatic browser scroll restoration so tab changes start fresh at top
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    // Scroll-to-top helper that resets window and document scroll containers instantly
+    function scrollToTop() {
+        const html = document.documentElement;
+        const prevBehavior = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto'; // Prevent smooth scroll lag/stuck offset
+
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+
+        const main = document.querySelector('.dash-main');
+        if (main) main.scrollTop = 0;
+        const content = document.querySelector('.dash-content');
+        if (content) content.scrollTop = 0;
+        const layout = document.querySelector('.dash-layout');
+        if (layout) layout.scrollTop = 0;
+
+        html.style.scrollBehavior = prevBehavior;
+    }
+
     // Tab switching
     const tabBtns = document.querySelectorAll('.dash-nav-item[data-tab]');
     const panels = document.querySelectorAll('.dash-tab-panel');
@@ -465,22 +934,81 @@ document.addEventListener('DOMContentLoaded', () => {
         settings: 'Settings'
     };
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const tab = btn.dataset.tab;
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            panels.forEach(p => p.classList.remove('active'));
-            const target = document.getElementById('tab-' + tab);
-            if (target) target.classList.add('active');
-            if (titleEl) titleEl.innerHTML = `<span class="dash-title-prefix">Dashboard </span>${tabTitles[tab] || tab}`;
+    function activateTab(tab, updateHash = true) {
+        if (!tab || !tabTitles[tab]) return;
 
-            // Close mobile sidebar
-            const sidebar = document.getElementById('dashSidebar');
-            const overlay = document.getElementById('dashSidebarOverlay');
-            if (sidebar) sidebar.classList.remove('open');
-            if (overlay) overlay.classList.remove('open');
+        tabBtns.forEach(b => {
+            if (b.dataset.tab === tab) {
+                b.classList.add('active');
+            } else {
+                b.classList.remove('active');
+            }
         });
+
+        panels.forEach(p => {
+            if (p.id === 'tab-' + tab) {
+                p.classList.add('active');
+            } else {
+                p.classList.remove('active');
+            }
+        });
+
+        if (titleEl) {
+            titleEl.innerHTML = `<span class="dash-title-prefix">Dashboard </span>${tabTitles[tab] || tab}`;
+        }
+
+        // Close mobile sidebar & overlay if open
+        const sidebar = document.getElementById('dashSidebar');
+        const overlay = document.getElementById('dashSidebarOverlay');
+        if (sidebar) sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('open');
+
+        // Reset scroll position to the top of the page immediately and on next paint frames
+        scrollToTop();
+        requestAnimationFrame(scrollToTop);
+        setTimeout(scrollToTop, 20);
+
+        if (updateHash) {
+            try {
+                history.replaceState(null, '', '#' + tab);
+            } catch (e) {}
+        }
+    }
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tab = btn.dataset.tab;
+            activateTab(tab, true);
+        });
+    });
+
+    // Delegated click for any data-tab trigger inside panels or cards
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-tab]');
+        if (trigger && !trigger.classList.contains('dash-nav-item')) {
+            const tab = trigger.dataset.tab;
+            if (tab && tabTitles[tab]) {
+                e.preventDefault();
+                activateTab(tab, true);
+            }
+        }
+    });
+
+    // Check URL hash on initial load
+    const initialHash = window.location.hash ? window.location.hash.replace('#tab-', '').replace('#', '') : '';
+    if (initialHash && tabTitles[initialHash]) {
+        activateTab(initialHash, false);
+    } else {
+        scrollToTop();
+    }
+
+    // Support browser back/forward or hash change navigation
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.replace('#tab-', '').replace('#', '');
+        if (hash && tabTitles[hash]) {
+            activateTab(hash, false);
+        }
     });
 
     // Mobile sidebar toggle

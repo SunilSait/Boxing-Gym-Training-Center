@@ -19,9 +19,9 @@
 
 <!-- ============ SECTION 1: PAGE HERO ============ -->
 <section style="background:var(--secondary);padding:100px 0 60px;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;z-index:0;"><img src="assets/images/boxing-equipment.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.15);"></div>
+    <div style="position:absolute;inset:0;z-index:0;"><img src="assets/images/contact-hero-bg.jpg" alt="IronJaw reception entrance and championship display" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.22);"></div>
     <div class="container" style="position:relative;z-index:2;">
-        <span class="section-badge" style="background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.3);backdrop-filter:blur(8px);"><i class="fas fa-envelope"></i> Get in Touch</span>
+        <span class="section-badge" style="background:rgba(132,204,22,0.18);border:1px solid rgba(132,204,22,0.35);backdrop-filter:blur(8px);"><i class="fas fa-envelope"></i> Get in Touch</span>
         <h1 class="section-title fade-up" style="color:#fff;font-size:3rem;">Contact <span style="color:var(--primary-light);">Us</span></h1>
         <p class="section-subtitle fade-up" style="color:rgba(255,255,255,0.6);">Have a question? Want to book a tour? We'd love to hear from you.</p>
     </div>
@@ -65,7 +65,12 @@
                 </div>
 
                 <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="IronJaw Boxing Gym Location"></iframe>
+                    <img src="assets/images/contact-location.jpg" alt="IronJaw Boxing Gym Downtown New York Facility Storefront" loading="lazy">
+                    <a href="#live-map" class="contact-map-badge" aria-label="Jump to Live Interactive Map">
+                        <i class="fas fa-map-location-dot"></i>
+                        <span>View Live Map</span>
+                        <i class="fas fa-arrow-down" style="font-size:0.7rem;opacity:0.8;"></i>
+                    </a>
                 </div>
             </div>
 
@@ -86,7 +91,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="contactSubject">Subject</label>
-                        <select class="form-input" id="contactSubject" required>
+                        <select class="form-input form-select" id="contactSubject" required>
                             <option value="">Select a subject</option>
                             <option>Book a Free Trial</option>
                             <option>Membership Inquiry</option>
@@ -97,17 +102,144 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label class="form-label" for="contactExperience">Experience Level</label>
+                        <select class="form-input form-select" id="contactExperience">
+                            <option value="">Select your experience level</option>
+                            <option>Beginner — First time putting on gloves</option>
+                            <option>Fitness & Cardio — Conditioning & weight loss</option>
+                            <option>Intermediate — Technique & combination drills</option>
+                            <option>Advanced / Fighter — Sparring & competition prep</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label class="form-label" for="contactMsg">Message</label>
                         <textarea class="form-textarea" id="contactMsg" placeholder="Tell us about your goals and how we can help..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary w-full">Send Message</button>
+
+                    <div class="contact-form-guarantee" style="padding: 12px 16px;">
+                        <div class="guarantee-header">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Fast Coach Response Guarantee</span>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ SECTION 3: QUICK CONTACT CARDS ============ -->
+<!-- ============ SECTION 3: INTERACTIVE LIVE MAP ============ -->
+<section class="section" id="live-map" style="padding-top: 20px;">
+    <div class="container">
+        <div style="text-align:center; max-width: 680px; margin: 0 auto 36px;">
+            <span class="section-badge fade-up"><i class="fas fa-map-location-dot"></i> Live Arena Map</span>
+            <h2 class="section-title fade-up">Find Our <span style="color:var(--primary);">Arena</span></h2>
+            <p class="section-subtitle fade-up">Located in the heart of Downtown New York. Fully equipped 15,000 sq ft facility with dedicated fighter parking and direct subway connections.</p>
+        </div>
+
+        <div class="live-map-card fade-up">
+            <!-- Top Controls Bar -->
+            <div class="live-map-topbar">
+                <div class="live-map-status">
+                    <span class="live-map-beacon"></span>
+                    <div class="live-map-status-text">
+                        <span class="live-map-status-title"><i class="fas fa-shield-halved" style="color:var(--primary);font-size:0.85rem;"></i> IronJaw Downtown HQ</span>
+                        <span class="live-map-status-sub">Open Today · 6:00 AM – 10:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="live-map-actions">
+                    <span class="live-map-pill"><i class="fas fa-train-subway"></i> A, C, E, 1, 2, 3</span>
+                    <span class="live-map-pill"><i class="fas fa-square-parking"></i> 30+ Free Spaces</span>
+                    <button type="button" class="live-map-btn" id="toggleMapThemeBtn" title="Toggle map contrast/theme">
+                        <i class="fas fa-circle-half-stroke"></i> <span id="mapThemeText">Tactical Dark</span>
+                    </button>
+                    <button type="button" class="live-map-btn" id="copyAddressBtn" title="Copy Gym Address">
+                        <i class="fas fa-copy"></i> <span id="copyBtnText">Copy Address</span>
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Downtown+Manhattan,+New+York,+NY+10001" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                        <i class="fas fa-diamond-turn-right"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+
+            <!-- Live Map Frame Container -->
+            <div class="live-map-frame-container">
+                <iframe 
+                    class="live-map-iframe tactical-dark" 
+                    id="liveMapIframe"
+                    src="https://maps.google.com/maps?q=Downtown+Manhattan,+New+York,+NY+10001&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" 
+                    title="IronJaw Boxing Gym Interactive Map">
+                </iframe>
+
+                <!-- Floating Glass Info Badge -->
+                <div class="live-map-floating-overlay">
+                    <h4><i class="fas fa-dumbbell"></i> IronJaw Main Facility</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <span>4.9 (380+ Fighter Reviews)</span>
+                    </div>
+                    <p><i class="fas fa-location-dot" style="color:var(--primary);margin-right:6px;"></i> 742 Fight Street, Downtown, New York, NY 10001</p>
+                    <div class="live-map-floating-tags">
+                        <span class="live-map-tag">Dual Rings</span>
+                        <span class="live-map-tag">Heavy Bag Arena</span>
+                        <span class="live-map-tag">Sauna & Cold Plunge</span>
+                    </div>
+                    <div class="live-map-floating-cta">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Downtown+Manhattan,+New+York,+NY+10001" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                            <i class="fas fa-diamond-turn-right"></i> Navigate
+                        </a>
+                        <a href="tel:18001234567" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-phone"></i> Front Desk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 Transit & Accessibility Cards -->
+        <div class="live-map-features fade-up">
+            <div class="live-map-feature-item">
+                <div class="live-map-feature-icon"><i class="fas fa-train-subway"></i></div>
+                <div class="live-map-feature-text">
+                    <h5>Subway Access</h5>
+                    <p>Chambers St & Fulton St stations (A, C, E, 1, 2, 3, R, W) — just 2 blocks away.</p>
+                </div>
+            </div>
+            <div class="live-map-feature-item">
+                <div class="live-map-feature-icon"><i class="fas fa-square-parking"></i></div>
+                <div class="live-map-feature-text">
+                    <h5>Member Parking</h5>
+                    <p>Free private 30+ vehicle lot behind Ring 1 entrance with EV chargers.</p>
+                </div>
+            </div>
+            <div class="live-map-feature-item">
+                <div class="live-map-feature-icon"><i class="fas fa-bus-simple"></i></div>
+                <div class="live-map-feature-text">
+                    <h5>Bus Lines</h5>
+                    <p>M9, M20, and M22 city bus lines stop directly in front of Fight Street.</p>
+                </div>
+            </div>
+            <div class="live-map-feature-item">
+                <div class="live-map-feature-icon"><i class="fas fa-shower"></i></div>
+                <div class="live-map-feature-text">
+                    <h5>Locker Rooms</h5>
+                    <p>Spacious lockers, rainfall showers, steam sauna, and complimentary towels.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 4: QUICK CONTACT CARDS ============ -->
 <section class="section section-alt">
     <div class="container text-center">
         <span class="section-badge fade-up"><i class="fas fa-bolt"></i> Quick Actions</span>
@@ -125,19 +257,19 @@
                 <div class="bento-card-icon" style="margin:0 auto 20px;"><i class="fas fa-building"></i></div>
                 <h3>Schedule a Tour</h3>
                 <p>Want to see the gym before joining? Schedule a guided tour with our team.</p>
-                <div style="margin-top:16px;"><a href="tel:18001234567" class="btn btn-secondary btn-sm">Call Us</a></div>
+                <div style="margin-top:16px;"><a href="tel:18001234567" class="btn btn-primary btn-sm">Call Us</a></div>
             </div>
             <div class="bento-card fade-up delay-2" style="text-align:center;">
                 <div class="bento-card-icon" style="margin:0 auto 20px;"><i class="fas fa-handshake"></i></div>
                 <h3>Corporate Packages</h3>
                 <p>Looking for team-building or corporate wellness boxing programs?</p>
-                <div style="margin-top:16px;"><a href="mailto:info@ironjaw.com" class="btn btn-secondary btn-sm">Email Us</a></div>
+                <div style="margin-top:16px;"><a href="mailto:info@ironjaw.com" class="btn btn-primary btn-sm">Email Us</a></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ SECTION 4: FAQ ============ -->
+<!-- ============ SECTION 5: FAQ ============ -->
 <section class="section">
     <div class="container text-center">
         <span class="section-badge fade-up"><i class="fas fa-circle-question"></i> FAQ</span>
@@ -163,5 +295,68 @@
 
 <div id="footer-placeholder"></div>
 <script src="components.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Copy Address Handler
+        const copyBtn = document.getElementById('copyAddressBtn');
+        const copyText = document.getElementById('copyBtnText');
+        if (copyBtn && copyText) {
+            copyBtn.addEventListener('click', function() {
+                const address = '742 Fight Street, Downtown, New York, NY 10001';
+                navigator.clipboard.writeText(address).then(function() {
+                    copyText.textContent = 'Copied!';
+                    copyBtn.style.borderColor = 'var(--primary)';
+                    copyBtn.style.color = 'var(--primary)';
+                    setTimeout(function() {
+                        copyText.textContent = 'Copy Address';
+                        copyBtn.style.borderColor = '';
+                        copyBtn.style.color = '';
+                    }, 2200);
+                }).catch(function() {
+                    prompt('Gym Address:', address);
+                });
+            });
+        }
+
+        // Live Map Theme Toggle Handler & Dark Mode Sync
+        const mapIframe = document.getElementById('liveMapIframe');
+        const toggleMapThemeBtn = document.getElementById('toggleMapThemeBtn');
+        const mapThemeText = document.getElementById('mapThemeText');
+
+        function updateMapFilter() {
+            const isDark = document.documentElement.classList.contains('dark');
+            if (mapIframe && mapThemeText) {
+                if (isDark) {
+                    mapIframe.classList.add('tactical-dark');
+                    mapThemeText.textContent = 'Tactical Dark';
+                } else {
+                    mapIframe.classList.remove('tactical-dark');
+                    mapThemeText.textContent = 'Daylight Map';
+                }
+            }
+        }
+
+        updateMapFilter();
+
+        if (toggleMapThemeBtn && mapIframe) {
+            toggleMapThemeBtn.addEventListener('click', function() {
+                const isNowDark = mapIframe.classList.toggle('tactical-dark');
+                if (mapThemeText) {
+                    mapThemeText.textContent = isNowDark ? 'Tactical Dark' : 'Daylight Map';
+                }
+            });
+        }
+
+        // Observe dark mode changes from navbar toggle
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(m) {
+                if (m.attributeName === 'class') {
+                    updateMapFilter();
+                }
+            });
+        });
+        observer.observe(document.documentElement, { attributes: true });
+    });
+</script>
 </body>
 </html>

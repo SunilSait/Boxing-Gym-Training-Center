@@ -7,6 +7,9 @@
 // Immediate Theme & Direction Initialization (prevents theme flash)
 (function() {
     try {
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
         const savedDark = localStorage.getItem('ij-dark');
         if (savedDark === '1') {
             document.documentElement.classList.add('dark');
@@ -24,11 +27,25 @@
 
 /* ---- LOGO SVG ---- */
 const LOGO_SVG = `<svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C8102E"/><stop offset="100%" stop-color="#8B0000"/></linearGradient></defs>
-  <rect width="100" height="100" rx="18" fill="url(#logoBg)"/>
-  <path d="M32 30 Q32 20 40 20 L60 20 Q68 20 68 30 L68 55 Q68 72 50 78 Q32 72 32 55 Z" fill="none" stroke="white" stroke-width="5"/>
-  <path d="M42 38 L42 52 M58 38 L58 52" stroke="white" stroke-width="4" stroke-linecap="round"/>
-  <path d="M40 62 Q50 70 60 62" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84CC16"/>
+      <stop offset="100%" stop-color="#4D7C0F"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#logoBg)"/>
+  <!-- Glove Cuff -->
+  <rect x="36" y="73" width="28" height="12" rx="3.5" fill="#0D0D14"/>
+  <rect x="39" y="76.5" width="22" height="5" rx="2" fill="#FFFFFF"/>
+  <!-- Glove Body -->
+  <path d="M39 73 C36 66 32 60 31 54 C23 54 18 46 19 38 C20 31 26 27 33 30 C35 31 37 34 38 37 C40 28 46 20 56 19 C68 18 79 26 80 39 C81 50 74 61 65 67 L61 73 Z" fill="#0D0D14"/>
+  <!-- Knuckle Seam Accent -->
+  <path d="M49 26 C60 25 71 29 73 40 C74 48 70 56 64 62" stroke="#84CC16" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Thumb Seam Accent -->
+  <path d="M37 36 C34 42 35 48 40 53" stroke="#84CC16" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Strike Lines -->
+  <path d="M85 26 C89 31 91 38 90 45" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M76 13 L82 9" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
 </svg>`;
 
 /* ---- FontAwesome Icon Helper ---- */
@@ -294,11 +311,11 @@ function renderFooter() {
 
             <!-- Bottom Bar -->
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; ${new Date().getFullYear()} IRONJAW. All rights reserved.</p>
+                <p class="footer-copyright">&copy; ${new Date().getFullYear()} IRONJAW BOXING GYM. All rights reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="coming-soon.html">Privacy Policy</a>
-                    <a href="coming-soon.html">Terms of Service</a>
-                    <a href="tel:18001234567">+1 (800) 123-4567</a>
+                    <a href="coming-soon.html">Privacy</a>
+                    <a href="coming-soon.html">Terms</a>
+                    <a href="coming-soon.html">Cookies</a>
                 </div>
             </div>
         </div>
@@ -604,6 +621,126 @@ function initHeroSlider() {
     startTimer();
 }
 
+/* ---- HERO 2 SLIDER (HOME 2) ---- */
+function initHero2Slider() {
+    const slider = document.getElementById('hero2Slider');
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.hero2-slide');
+    const dots = slider.querySelectorAll('.hero2-dot');
+    const prevBtn = document.getElementById('hero2PrevBtn');
+    const nextBtn = document.getElementById('hero2NextBtn');
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let timer = null;
+    let isPaused = false;
+    const duration = 5000;
+
+    function updateSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+            const isActive = i === currentIndex;
+            slide.classList.toggle('active', isActive);
+            slide.setAttribute('aria-hidden', !isActive);
+        });
+        dots.forEach((dot, i) => {
+            const isActive = i === currentIndex;
+            dot.classList.toggle('active', isActive);
+            const fill = dot.querySelector('.hero2-dot-fill');
+            if (fill) {
+                fill.style.animation = 'none';
+                if (isActive) {
+                    void fill.offsetWidth;
+                    fill.style.animation = `hero2Progress ${duration}ms linear forwards`;
+                    if (isPaused) {
+                        fill.style.animationPlayState = 'paused';
+                    }
+                }
+            }
+        });
+    }
+
+    function nextSlide() { updateSlide(currentIndex + 1); }
+    function prevSlide() { updateSlide(currentIndex - 1); }
+
+    function startTimer() {
+        stopTimer();
+        timer = setInterval(() => {
+            if (!isPaused) nextSlide();
+        }, duration);
+    }
+    function stopTimer() {
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+    function resetTimer() {
+        startTimer();
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetTimer();
+        });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetTimer();
+        });
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            if (currentIndex !== i) {
+                updateSlide(i);
+                resetTimer();
+            }
+        });
+        dot.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (currentIndex !== i) {
+                    updateSlide(i);
+                    resetTimer();
+                }
+            }
+        });
+    });
+
+    slider.addEventListener('mouseenter', () => {
+        isPaused = true;
+        const activeFill = slider.querySelector('.hero2-dot.active .hero2-dot-fill');
+        if (activeFill) activeFill.style.animationPlayState = 'paused';
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isPaused = false;
+        const activeFill = slider.querySelector('.hero2-dot.active .hero2-dot-fill');
+        if (activeFill) activeFill.style.animationPlayState = 'running';
+    });
+
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 45) {
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            diff > 0 ? (isRTL ? prevSlide() : nextSlide()) : (isRTL ? nextSlide() : prevSlide());
+            resetTimer();
+        }
+    }, { passive: true });
+
+    updateSlide(0);
+    startTimer();
+}
+
 /* ---- TAB FILTERING ---- */
 function initTabFilter() {
     const tabs = document.querySelectorAll('.filter-tab');
@@ -649,8 +786,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initDark();
     initRTL();
 
+    // Ensure clean page load starts at top if there's no hash anchor
+    if (!window.location.hash) {
+        window.scrollTo(0, 0);
+    }
+
     const page = getCurrentPage();
-    const authPages = ['login.html', 'signup.html'];
+    const authPages = ['login.html', 'signup.html', 'forgot-password.html'];
     const fullscreenPages = ['404.html', 'coming-soon.html'];
     const dashboardPages = ['dashboard.html'];
 
@@ -671,7 +813,38 @@ document.addEventListener('DOMContentLoaded', () => {
     initPasswordToggle();
     animateCounters();
     initHeroSlider();
+    initHero2Slider();
     initTabFilter();
+    initScheduleFilter();
 
     if (page === 'coming-soon.html') initCountdown();
 });
+
+/* ---- SCHEDULE LIVE BOARD FILTER ---- */
+function initScheduleFilter() {
+    const tabs = document.querySelectorAll('.schedule-filter-btn');
+    const rows = document.querySelectorAll('.schedule-row-card');
+    if (!tabs.length || !rows.length) return;
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const filter = tab.getAttribute('data-time');
+            rows.forEach(row => {
+                const cat = row.getAttribute('data-time');
+                if (filter === 'all' || cat === filter) {
+                    row.style.display = 'grid';
+                    row.style.opacity = '0';
+                    row.style.transform = 'translateY(8px)';
+                    requestAnimationFrame(() => {
+                        row.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+                        row.style.opacity = '1';
+                        row.style.transform = 'translateY(0)';
+                    });
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    });
+}
